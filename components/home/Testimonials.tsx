@@ -41,7 +41,7 @@ export default function Testimonials() {
           transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
           className="mb-14"
         >
-          <span className="text-[11px] font-medium tracking-[0.2em] uppercase text-taupe">
+          <span className="text-sm font-medium tracking-[0.2em] uppercase text-taupe">
             What clients say
           </span>
           <h2
@@ -76,7 +76,7 @@ export default function Testimonials() {
               </span>
 
               <blockquote className="flex-1 relative">
-                <p className="text-navy/70 text-sm leading-relaxed">{t.quote}</p>
+                <p className="text-navy/70 text-base leading-relaxed">{t.quote}</p>
               </blockquote>
               <figcaption className="mt-8 flex items-center gap-3 relative">
                 <div
@@ -86,8 +86,8 @@ export default function Testimonials() {
                   {t.initial}
                 </div>
                 <div>
-                  <p className="font-baskerville text-navy text-sm">{t.author}</p>
-                  <p className="text-[#A89B8C] text-xs">{t.role}</p>
+                  <p className="font-baskerville text-navy text-base">{t.author}</p>
+                  <p className="text-[#A89B8C] text-sm">{t.role}</p>
                 </div>
               </figcaption>
             </motion.figure>

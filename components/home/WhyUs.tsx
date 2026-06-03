@@ -48,7 +48,7 @@ export default function WhyUs() {
             >
               <div className="flex items-start gap-4 mb-3">
                 <div className="w-[2px] h-[60px] bg-[#A89B8C] flex-shrink-0 mt-1" aria-hidden="true" />
-                <span className="text-xs font-medium tracking-[0.18em] uppercase text-taupe pt-1">
+                <span className="text-sm font-medium tracking-[0.18em] uppercase text-taupe pt-1">
                   Why choose us
                 </span>
               </div>
@@ -58,7 +58,7 @@ export default function WhyUs() {
               >
                 Accounting built around you
               </h2>
-              <p className="mt-6 text-white/50 text-base leading-relaxed">
+              <p className="mt-6 text-white/50 text-lg leading-relaxed">
                 Our humble roots as a 2006 start-up mean we earned every client.
                 18 years on, we still operate on the same principles.
               </p>
@@ -69,7 +69,7 @@ export default function WhyUs() {
                     <polyline points="22 4 12 14.01 9 11.01" />
                   </svg>
                 </div>
-                <p className="text-white/40 text-sm">
+                <p className="text-white/40 text-base">
                   ACCA regulated · All work in-house · Est. 2006
                 </p>
               </div>
@@ -91,14 +91,14 @@ export default function WhyUs() {
                 }}
                 className="py-8 grid grid-cols-12 gap-6 group"
               >
-                <span className="col-span-2 font-baskerville text-taupe text-sm pt-1">
+                <span className="col-span-2 font-baskerville text-taupe text-base pt-1">
                   {pillar.number}
                 </span>
                 <div className="col-span-10">
-                  <h3 className="font-baskerville text-xl text-white mb-3 leading-snug">
+                  <h3 className="font-baskerville text-2xl text-white mb-3 leading-snug">
                     {pillar.title}
                   </h3>
-                  <p className="text-white/50 text-sm leading-relaxed max-w-lg">
+                  <p className="text-white/50 text-base leading-relaxed max-w-lg">
                     {pillar.description}
                   </p>
                 </div>

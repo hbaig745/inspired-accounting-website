@@ -14,7 +14,7 @@ export default function AboutTeaser() {
           viewport={{ once: true }}
           transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
         >
-          <span className="text-[11px] font-medium tracking-[0.2em] uppercase text-white/70 block mb-4">
+          <span className="text-sm font-medium tracking-[0.2em] uppercase text-white/70 block mb-4">
             About the firm
           </span>
           <h2
@@ -29,7 +29,7 @@ export default function AboutTeaser() {
             <span className="font-baskerville text-7xl text-white leading-none tracking-tight">
               18
             </span>
-            <span className="text-white/70 text-xs font-medium tracking-[0.15em] uppercase mb-2.5">
+            <span className="text-white/70 text-sm font-medium tracking-[0.15em] uppercase mb-2.5">
               Years in practice
             </span>
           </div>
@@ -37,7 +37,7 @@ export default function AboutTeaser() {
           <div className="mt-10">
             <Link
               href="/about"
-              className="group inline-flex items-center gap-2 text-white text-sm font-medium tracking-wide underline underline-offset-4 decoration-white/40 hover:decoration-white transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/50 rounded"
+              className="group inline-flex items-center gap-2 text-white text-base font-medium tracking-wide underline underline-offset-4 decoration-white/40 hover:decoration-white transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/50 rounded"
             >
               Learn more about us
               <svg
@@ -69,13 +69,13 @@ export default function AboutTeaser() {
           className="max-w-lg"
         >
           {/* TODO: Replace placeholder About page copy with real firm story */}
-          <p className="text-[#0C263F]/70 text-base leading-relaxed">
+          <p className="text-[#0C263F]/70 text-lg leading-relaxed">
             Our humble roots as a start-up in 2006 means we didn&apos;t buy
             our portfolio of clients — we won and retained them through
             effort and results. Starting as a sole practitioner, we&apos;ve
             grown organically to a team of five ACCA-accredited accountants.
           </p>
-          <p className="mt-6 text-[#0C263F]/70 text-base leading-relaxed">
+          <p className="mt-6 text-[#0C263F]/70 text-lg leading-relaxed">
             All work is completed in-house. We never subcontract or send work
             to third-party processing centres. We understand your business, and
             we&apos;re invested in its success.

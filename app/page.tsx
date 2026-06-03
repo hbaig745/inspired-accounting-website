@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Hero from "@/components/home/Hero";
-import TrustBar from "@/components/home/TrustBar";
 import ServicesOverview from "@/components/home/ServicesOverview";
 import CaseStudiesPreview from "@/components/home/CaseStudiesPreview";
 import WhyUs from "@/components/home/WhyUs";
@@ -23,8 +22,7 @@ export default function HomePage() {
   return (
     <>
       <Hero />
-      <TrustBar />
-      <ServicesOverview />
+<ServicesOverview />
       <div className="h-px bg-taupe/20" aria-hidden="true" />
       <CaseStudiesPreview />
       <WhyUs />

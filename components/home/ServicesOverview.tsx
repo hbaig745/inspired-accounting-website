@@ -85,7 +85,7 @@ export default function ServicesOverview() {
           viewport={{ once: true }}
           transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
         >
-          <span className="text-[11px] font-medium tracking-[0.2em] uppercase text-taupe block mb-4">
+          <span className="text-sm font-medium tracking-[0.2em] uppercase text-taupe block mb-4">
             What we do
           </span>
           <h2
@@ -94,7 +94,7 @@ export default function ServicesOverview() {
           >
             Accounting done right
           </h2>
-          <p className="mt-6 text-navy/60 text-base leading-relaxed max-w-sm">
+          <p className="mt-6 text-navy/60 text-lg leading-relaxed max-w-sm">
             When accounting is done right, it is both simple and powerful.
             We handle the full spectrum — from annual accounts to day-to-day
             bookkeeping — so you stay focused on what you do best.
@@ -102,7 +102,7 @@ export default function ServicesOverview() {
           <div className="mt-10">
             <Link
               href="/services"
-              className="group inline-flex items-center gap-2 text-steel text-sm font-medium tracking-wide underline underline-offset-4 decoration-steel/40 hover:decoration-steel hover:text-navy transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-steel/50 rounded"
+              className="group inline-flex items-center gap-2 text-steel text-base font-medium tracking-wide underline underline-offset-4 decoration-steel/40 hover:decoration-steel hover:text-navy transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-steel/50 rounded"
             >
               View all services
               <svg
@@ -143,10 +143,10 @@ export default function ServicesOverview() {
               <div className="w-10 h-10 rounded-lg bg-[#0C263F]/5 flex items-center justify-center text-[#0C263F] mb-5 transition-colors duration-300 group-hover:bg-[#0C263F] group-hover:text-white">
                 {service.icon}
               </div>
-              <h3 className="font-baskerville text-lg text-[#0C263F] mb-2 leading-snug">
+              <h3 className="font-baskerville text-xl text-[#0C263F] mb-3 leading-snug">
                 {service.title}
               </h3>
-              <p className="text-[#0C263F]/70 text-sm leading-relaxed">
+              <p className="text-[#0C263F]/70 text-base leading-relaxed">
                 {service.description}
               </p>
             </motion.article>

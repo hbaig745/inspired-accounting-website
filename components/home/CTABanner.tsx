@@ -29,13 +29,13 @@ export default function CTABanner() {
             transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
             className="lg:col-span-8"
           >
-            <span className="text-xs font-medium tracking-[0.18em] uppercase text-taupe block mb-4">
+            <span className="text-sm font-medium tracking-[0.18em] uppercase text-taupe block mb-4">
               Take the first step
             </span>
             <h2 className="font-baskerville text-5xl md:text-6xl xl:text-7xl text-white leading-tight tracking-tight text-balance">
               Ready for accounting that actually works for you?
             </h2>
-            <p className="mt-6 text-white/50 text-base leading-relaxed max-w-xl">
+            <p className="mt-6 text-white/50 text-lg leading-relaxed max-w-xl">
               Our free Discovery Call is a no-obligations conversation about your
               business and what we can do for it. No jargon, no pressure.
             </p>
@@ -50,7 +50,7 @@ export default function CTABanner() {
           >
             <Link
               href="/contact"
-              className="group inline-flex items-center justify-center gap-2.5 px-7 py-4 rounded-full bg-steel text-white text-sm font-medium tracking-wide transition-all duration-300 ease-[cubic-bezier(0.25,1,0.5,1)] hover:bg-[#3d6a90] hover:shadow-[0_0_24px_rgba(74,120,158,0.4)] active:scale-[0.97] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-steel focus-visible:ring-offset-2 focus-visible:ring-offset-navy text-center"
+              className="group inline-flex items-center justify-center gap-2.5 px-7 py-4 rounded-full bg-steel text-white text-base font-medium tracking-wide transition-all duration-300 ease-[cubic-bezier(0.25,1,0.5,1)] hover:bg-[#3d6a90] hover:shadow-[0_0_24px_rgba(74,120,158,0.4)] active:scale-[0.97] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-steel focus-visible:ring-offset-2 focus-visible:ring-offset-navy text-center"
             >
               Book a Free Consultation
               <span className="w-6 h-6 rounded-full bg-white/10 flex items-center justify-center transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-px">
@@ -59,7 +59,7 @@ export default function CTABanner() {
                 </svg>
               </span>
             </Link>
-            <p className="text-center text-white/60 text-sm font-sans">
+            <p className="text-center text-white/60 text-base font-sans">
               Or call us on{" "}
               <a
                 href="tel:01162206019"
