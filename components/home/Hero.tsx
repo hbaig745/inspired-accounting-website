@@ -13,26 +13,25 @@ export default function Hero() {
       style={{ backgroundColor: "#0C263F" }}
       aria-label="Hero"
     >
-      {/* Background photo — professional business/finance */}
+      {/* Background photo */}
       <div className="absolute inset-0" aria-hidden="true">
         <Image
-          src="/hero-options/gpt_hero.png"
+          src="/hero-options/gpt_hero_1.png"
           alt=""
           fill
           priority
           sizes="100vw"
           className="object-cover object-center"
         />
-        {/* Dark navy tint */}
         <div className="absolute inset-0 bg-[#0C263F]/60" />
-        {/* Bottom fade so sections below feel grounded */}
         <div className="absolute bottom-0 left-0 right-0 h-48 bg-gradient-to-t from-[#0C263F] to-transparent" />
       </div>
 
-      {/* Centred content */}
-      <div className="relative z-10 flex flex-col items-center text-center px-6 max-w-3xl mx-auto">
-
-        {/* Logo — large and centred */}
+      {/* Centred content — shifted down 5vh */}
+      <div
+        className="relative z-10 flex flex-col items-center text-center px-6 max-w-3xl mx-auto"
+        style={{ transform: "translateY(5vh)" }}
+      >
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
@@ -40,7 +39,7 @@ export default function Hero() {
           className="mb-8 md:mb-10"
         >
           <Image
-            src="/logos/Inspired Accounting Logo w Tagline Negative.png"
+            src="/logos/Inspired Accounting Logo Negative.png"
             alt="Inspired Accounting"
             width={480}
             height={216}
@@ -49,7 +48,6 @@ export default function Hero() {
           />
         </motion.div>
 
-        {/* Headline */}
         <motion.h1
           initial={{ opacity: 0, y: 18 }}
           animate={{ opacity: 1, y: 0 }}
@@ -59,7 +57,6 @@ export default function Hero() {
           Your trusted accountants in Leicester
         </motion.h1>
 
-        {/* Sub-line */}
         <motion.p
           initial={{ opacity: 0, y: 14 }}
           animate={{ opacity: 1, y: 0 }}
@@ -69,7 +66,6 @@ export default function Hero() {
           Chartered Certified Accountants · Est. 2006
         </motion.p>
 
-        {/* CTAs */}
         <motion.div
           initial={{ opacity: 0, y: 14 }}
           animate={{ opacity: 1, y: 0 }}
@@ -99,7 +95,6 @@ export default function Hero() {
           </Link>
         </motion.div>
 
-        {/* Trust signal */}
         <motion.p
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
