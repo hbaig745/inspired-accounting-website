@@ -40,7 +40,7 @@ export default function Navbar() {
       <motion.div
         animate={{
           backgroundColor: menuOpen || scrolled || !isHomepage
-            ? "rgba(168,155,140,1)"
+            ? "rgb(238,234,229)"
             : "rgba(0,0,0,0)",
         }}
         transition={{ duration: 0.4, ease: [0.25, 1, 0.5, 1] }}
@@ -73,7 +73,10 @@ export default function Navbar() {
                         href={link.href}
                         className={`text-[11px] md:text-xs tracking-[0.22em] uppercase whitespace-nowrap font-bold
                           transition-colors duration-200 focus-visible:outline-none
-                          ${pathname === link.href ? "text-navy" : "text-navy/70 hover:text-navy"}`}
+                          ${menuOpen || scrolled || pathname !== "/"
+                            ? pathname === link.href ? "text-navy" : "text-navy/70 hover:text-navy"
+                            : pathname === link.href ? "text-white" : "text-white/70 hover:text-white"
+                          }`}
                       >
                         {link.label}
                       </Link>
@@ -95,7 +98,7 @@ export default function Navbar() {
               {lineVariants.map((v, i) => (
                 <motion.span
                   key={i}
-                  className="absolute left-0 right-0 h-px bg-navy origin-center"
+                  className={`absolute left-0 right-0 h-px origin-center ${menuOpen || scrolled || pathname !== "/" ? "bg-navy" : "bg-white"}`}
                   style={{ top: "50%" }}
                   animate={menuOpen ? v.x : v.hamburger}
                   transition={{ duration: 0.38, ease: [0.25, 1, 0.5, 1] }}

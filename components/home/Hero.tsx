@@ -23,7 +23,9 @@ export default function Hero() {
           sizes="100vw"
           className="object-cover object-center"
         />
-        <div className="absolute inset-0 bg-[#0C263F]/60" />
+        <div className="absolute inset-0 bg-[#0C263F]/80" />
+        {/* Top gradient — keeps navbar area dark regardless of image crop */}
+        <div className="absolute top-0 left-0 right-0 h-28 bg-gradient-to-b from-[#0C263F] to-transparent" />
         <div className="absolute bottom-0 left-0 right-0 h-48 bg-gradient-to-t from-[#0C263F] to-transparent" />
       </div>
 
@@ -70,7 +72,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 14 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.75, ease: EASE }}
-          className="flex flex-col sm:flex-row items-center gap-3 sm:gap-4"
+          className="flex flex-col items-center gap-3"
         >
           <Link
             href="/contact"
