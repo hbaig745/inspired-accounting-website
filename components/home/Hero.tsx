@@ -40,7 +40,7 @@ export default function Hero() {
           className="mb-8 md:mb-10"
         >
           <Image
-            src="/logos/Inspired Accounting Logo w Tagline White.svg"
+            src="/logos/Inspired Accounting Logo w Tagline Full Color.svg"
             alt="Inspired Accounting"
             width={480}
             height={216}
