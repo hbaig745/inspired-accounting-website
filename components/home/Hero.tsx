@@ -50,20 +50,11 @@ export default function Hero() {
           />
         </motion.div>
 
-        <motion.h1
-          initial={{ opacity: 0, y: 18 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.45, ease: EASE }}
-          className="font-baskerville text-2xl sm:text-3xl md:text-4xl text-white leading-snug mb-4"
-        >
-          Your trusted accountants in Leicester
-        </motion.h1>
-
         <motion.p
           initial={{ opacity: 0, y: 14 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.6, ease: EASE }}
-          className="text-white/55 text-xs sm:text-sm tracking-[0.2em] uppercase mb-10 md:mb-12"
+          className="text-white/55 text-[clamp(0.75rem,2.2vw,1.5rem)] tracking-[0.15em] uppercase whitespace-nowrap mb-10 md:mb-12"
         >
           Chartered Certified Accountants · Est. 2006
         </motion.p>
@@ -76,7 +67,7 @@ export default function Hero() {
         >
           <Link
             href="/contact"
-            className="group inline-flex w-full sm:w-auto justify-center items-center gap-2.5 px-7 py-4 rounded-full bg-steel text-white text-sm font-medium tracking-wide transition-[background-color,transform] duration-200 hover:bg-[#3d6a90] active:scale-[0.97] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-steel"
+            className="group inline-flex w-full sm:w-auto justify-center items-center gap-2.5 px-7 py-4 rounded-full bg-taupe text-white text-sm font-medium tracking-wide transition-[background-color,transform] duration-200 hover:bg-[#968a7c] active:scale-[0.97] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-taupe"
           >
             Get a Free Consultation
             <span className="w-6 h-6 rounded-full bg-white/10 flex items-center justify-center transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-px">
@@ -97,14 +88,19 @@ export default function Hero() {
           </Link>
         </motion.div>
 
-        <motion.p
+        <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1.0, duration: 0.6 }}
-          className="mt-10 md:mt-14 text-white/45 text-sm tracking-wide"
+          className="mt-10 md:mt-14"
         >
-          ★★★★★&nbsp;&nbsp;Rated 5 stars by Leicester businesses
-        </motion.p>
+          <Link
+            href="/case-studies"
+            className="text-white/45 text-sm tracking-wide focus-visible:outline-none"
+          >
+            ★★★★★&nbsp;&nbsp;Rated 5 stars by Leicester businesses
+          </Link>
+        </motion.div>
       </div>
 
       {/* Scroll indicator */}

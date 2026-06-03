@@ -22,8 +22,14 @@ export default function BlogPage() {
   return (
     <>
       {/* Hero */}
-      <section className="bg-navy pt-32 pb-20 md:pt-40 md:pb-24">
-        <div className="container-max section-padding">
+      <section className="bg-navy pt-32 pb-20 md:pt-40 md:pb-24 relative overflow-hidden">
+        <div className="absolute inset-0 overflow-hidden pointer-events-none" aria-hidden="true">
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_60%_80%_at_80%_50%,rgba(168,155,140,0.15),transparent)]" />
+          <div className="absolute right-0 top-0 h-full w-px bg-gradient-to-b from-transparent via-taupe/20 to-transparent" />
+          <div className="absolute inset-0 bg-taupe/[0.07]" style={{ clipPath: "polygon(60% 0, 100% 0, 100% 100%, 40% 100%)" }} />
+          <div className="absolute inset-0 bg-taupe/[0.08]" style={{ clipPath: "polygon(75% 0, 100% 0, 100% 100%, 58% 100%)" }} />
+        </div>
+        <div className="container-max section-padding relative z-10">
           <span className="text-xs font-medium tracking-[0.18em] uppercase text-taupe">
             Insights
           </span>

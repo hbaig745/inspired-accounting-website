@@ -10,6 +10,8 @@ export interface CaseStudy {
   excerpt: string;
   outcome: string;
   client: string;
+  metric: string;
+  metricLabel: string;
   content: string;
 }
 
@@ -31,6 +33,8 @@ export function getAllCaseStudies(): Omit<CaseStudy, "content">[] {
       excerpt: data.excerpt ?? "",
       outcome: data.outcome ?? "",
       client: data.client ?? "",
+      metric: data.metric ?? "",
+      metricLabel: data.metricLabel ?? "",
     };
   });
 }
@@ -51,6 +55,8 @@ export function getCaseStudyBySlug(slug: string): CaseStudy | null {
     excerpt: data.excerpt ?? "",
     outcome: data.outcome ?? "",
     client: data.client ?? "",
+    metric: data.metric ?? "",
+    metricLabel: data.metricLabel ?? "",
     content,
   };
 }
