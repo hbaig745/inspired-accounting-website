@@ -16,7 +16,7 @@ export default function Hero() {
       {/* Background photo — professional business/finance */}
       <div className="absolute inset-0" aria-hidden="true">
         <Image
-          src="/hero-options/10.jpg"
+          src="/hero-options/gpt_hero.png"
           alt=""
           fill
           priority
@@ -40,7 +40,7 @@ export default function Hero() {
           className="mb-8 md:mb-10"
         >
           <Image
-            src="/logos/Inspired Accounting Logo w Tagline Full Color.svg"
+            src="/logos/Inspired Accounting Logo w Tagline Negative.png"
             alt="Inspired Accounting"
             width={480}
             height={216}
