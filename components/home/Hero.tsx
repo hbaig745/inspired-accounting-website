@@ -16,32 +16,32 @@ export default function Hero() {
       {/* Background photo */}
       <div className="absolute inset-0" aria-hidden="true">
         <Image
-          src="/hero-options/gpt_hero_1.png"
+          src="/hero-options/no-logo.png"
           alt=""
           fill
           priority
           sizes="100vw"
           className="object-cover object-center"
         />
-        <div className="absolute inset-0 bg-[#0C263F]/80" />
-        {/* Top gradient — keeps navbar area dark regardless of image crop */}
-        <div className="absolute top-0 left-0 right-0 h-28 bg-gradient-to-b from-[#0C263F] to-transparent" />
-        <div className="absolute bottom-0 left-0 right-0 h-48 bg-gradient-to-t from-[#0C263F] to-transparent" />
+        {/* Vertical window overlay — dark over number rows, transparent over white panel */}
+        <div className="absolute inset-0" style={{ background: "linear-gradient(to bottom, rgba(12,38,63,0.75) 0%, rgba(12,38,63,0.75) 21%, rgba(12,38,63,0.05) 27%, rgba(12,38,63,0.05) 63%, rgba(12,38,63,0.75) 70%, rgba(12,38,63,0.75) 100%)" }} />
+        {/* Top gradient — keeps navbar area fully dark */}
+        <div className="absolute top-0 left-0 right-0 h-20 bg-gradient-to-b from-[#0C263F] to-transparent" />
       </div>
 
       {/* Centred content — shifted down 5vh */}
       <div
         className="relative z-10 flex flex-col items-center text-center px-6 max-w-3xl mx-auto"
-        style={{ transform: "translateY(5vh)" }}
+        style={{ transform: "translateY(7.5vh)" }}
       >
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9, delay: 0.2, ease: EASE }}
-          className="mb-8 md:mb-10"
+          className="mb-3 md:mb-4 pt-4 md:pt-6"
         >
           <Image
-            src="/logos/Inspired Accounting Logo Negative.png"
+            src="/logos/Inspired Accounting Logo Full Color.svg"
             alt="Inspired Accounting"
             width={480}
             height={216}
@@ -50,11 +50,20 @@ export default function Hero() {
           />
         </motion.div>
 
+        <motion.h1
+          initial={{ opacity: 0, y: 18 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.45, ease: EASE }}
+          className="font-baskerville text-xl sm:text-2xl md:text-3xl text-navy leading-snug mb-4 font-bold"
+        >
+          Leicester's trusted accountants
+        </motion.h1>
+
         <motion.p
           initial={{ opacity: 0, y: 14 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.6, ease: EASE }}
-          className="text-white/55 text-[clamp(0.75rem,2.2vw,1.5rem)] tracking-[0.15em] uppercase whitespace-nowrap mb-10 md:mb-12"
+          className="text-navy text-[clamp(0.55rem,1.5vw,0.9rem)] tracking-[0.15em] uppercase whitespace-nowrap font-bold mb-5 md:mb-6"
         >
           Chartered Certified Accountants · Est. 2006
         </motion.p>
@@ -63,11 +72,11 @@ export default function Hero() {
           initial={{ opacity: 0, y: 14 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.75, ease: EASE }}
-          className="flex flex-col items-center gap-3"
+          className="flex flex-col items-center gap-3 pt-10 md:pt-14"
         >
           <Link
             href="/contact"
-            className="group inline-flex w-full sm:w-auto justify-center items-center gap-2.5 px-7 py-4 rounded-full bg-taupe text-white text-sm font-medium tracking-wide transition-[background-color,transform] duration-200 hover:bg-[#968a7c] active:scale-[0.97] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-taupe"
+            className="group inline-flex w-full sm:w-auto justify-center items-center gap-2.5 px-9 py-5 rounded-full bg-taupe text-white text-base font-medium tracking-wide transition-[background-color,transform] duration-200 hover:bg-[#968a7c] active:scale-[0.97] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-taupe"
           >
             Get a Free Consultation
             <span className="w-6 h-6 rounded-full bg-white/10 flex items-center justify-center transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-px">
@@ -79,7 +88,7 @@ export default function Hero() {
 
           <Link
             href="/services"
-            className="inline-flex w-full sm:w-auto justify-center items-center gap-2 text-white/65 hover:text-white text-sm font-medium tracking-wide transition-colors duration-200 group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-steel rounded"
+            className="inline-flex w-full sm:w-auto justify-center items-center gap-2 text-white/65 hover:text-white text-lg font-medium tracking-wide transition-colors duration-200 group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-steel rounded"
           >
             Our Services
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="transition-transform duration-200 group-hover:translate-x-0.5" aria-hidden="true">
@@ -92,13 +101,13 @@ export default function Hero() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1.0, duration: 0.6 }}
-          className="mt-10 md:mt-14"
+          className="mt-4 md:mt-5"
         >
           <Link
             href="/case-studies"
-            className="text-white/45 text-sm tracking-wide focus-visible:outline-none"
+            className="text-white/45 text-lg tracking-wide focus-visible:outline-none"
           >
-            ★★★★★&nbsp;&nbsp;Rated 5 stars by Leicester businesses
+            ★★★★★&nbsp;&nbsp;Rated 5 stars by businesses
           </Link>
         </motion.div>
       </div>

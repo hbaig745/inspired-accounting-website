@@ -28,7 +28,7 @@ export default function Footer() {
                 alt="Inspired Accounting"
                 width={220}
                 height={100}
-                className="h-16 w-auto mb-6"
+                className="h-48 w-auto mb-6"
               />
             </Link>
             <p className="text-white/60 text-sm leading-relaxed max-w-xs">
