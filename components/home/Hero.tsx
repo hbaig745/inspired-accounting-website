@@ -56,7 +56,7 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.45, ease: EASE }}
           className="font-baskerville text-xl sm:text-2xl md:text-3xl text-navy leading-snug mb-4 font-bold"
         >
-          Leicester's trusted accountants
+          Leicester&apos;s trusted accountants
         </motion.h1>
 
         <motion.p
