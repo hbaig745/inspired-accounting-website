@@ -13,8 +13,8 @@ export default function Hero() {
       style={{ backgroundColor: "#0C263F" }}
       aria-label="Hero"
     >
-      {/* Background photo */}
-      <div className="absolute inset-0" aria-hidden="true">
+      {/* Background photo — desktop only */}
+      <div className="hidden md:block absolute inset-0" aria-hidden="true">
         <Image
           src="/hero-options/no-logo.png"
           alt=""
@@ -29,6 +29,18 @@ export default function Hero() {
         <div className="absolute top-0 left-0 right-0 h-20 bg-gradient-to-b from-[#0C263F] to-transparent" />
       </div>
 
+      {/* Mobile background — geometric lines + ambient glow */}
+      <div className="md:hidden absolute inset-0 pointer-events-none" aria-hidden="true">
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_50%_at_50%_0%,rgba(168,155,140,0.12),transparent)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_60%_40%_at_10%_90%,rgba(74,120,158,0.10),transparent)]" />
+        <svg className="absolute inset-0 w-full h-full opacity-[0.07]" viewBox="0 0 400 800" fill="none" preserveAspectRatio="xMidYMid slice">
+          <line x1="400" y1="0" x2="50"  y2="800" stroke="white" strokeWidth="1" />
+          <line x1="400" y1="0" x2="180" y2="800" stroke="white" strokeWidth="0.5" />
+          <line x1="400" y1="100" x2="0" y2="800" stroke="white" strokeWidth="0.5" />
+          <line x1="0"   y1="200" x2="400" y2="600" stroke="white" strokeWidth="0.4" />
+        </svg>
+      </div>
+
       {/* Centred content — shifted down 5vh */}
       <div
         className="relative z-10 flex flex-col items-center text-center px-6 max-w-3xl mx-auto"
@@ -40,12 +52,21 @@ export default function Hero() {
           transition={{ duration: 0.9, delay: 0.2, ease: EASE }}
           className="mb-3 md:mb-4 pt-4 md:pt-6"
         >
+          {/* White logo on mobile (dark bg), full-colour on desktop (light photo bg) */}
+          <Image
+            src="/logos/Inspired Accounting Logo Negative.svg"
+            alt="Inspired Accounting"
+            width={480}
+            height={216}
+            className="h-auto w-[82vw] sm:w-[65vw] md:hidden"
+            priority
+          />
           <Image
             src="/logos/Inspired Accounting Logo Full Color.svg"
             alt="Inspired Accounting"
             width={480}
             height={216}
-            className="w-80 sm:w-[420px] md:w-[560px] h-auto"
+            className="hidden md:block h-auto w-[37vw]"
             priority
           />
         </motion.div>
@@ -54,7 +75,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 18 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.45, ease: EASE }}
-          className="font-baskerville text-xl sm:text-2xl md:text-3xl text-navy leading-snug mb-4 font-bold"
+          className="font-baskerville text-xl sm:text-2xl md:text-3xl text-white md:text-navy leading-snug mb-4 font-bold"
         >
           Leicester&apos;s trusted accountants
         </motion.h1>
@@ -63,7 +84,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 14 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.6, ease: EASE }}
-          className="text-navy text-[clamp(0.55rem,1.5vw,0.9rem)] tracking-[0.15em] uppercase whitespace-nowrap font-bold mb-5 md:mb-6"
+          className="text-white/80 md:text-navy text-[clamp(0.55rem,1.5vw,0.9rem)] tracking-[0.15em] uppercase whitespace-nowrap font-bold mb-5 md:mb-6"
         >
           Chartered Certified Accountants · Est. 2006
         </motion.p>
@@ -76,7 +97,7 @@ export default function Hero() {
         >
           <Link
             href="/contact"
-            className="group inline-flex w-full sm:w-auto justify-center items-center gap-2.5 px-9 py-5 rounded-full bg-taupe text-white text-base font-medium tracking-wide transition-[background-color,transform] duration-200 hover:bg-[#968a7c] active:scale-[0.97] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-taupe"
+            className="group inline-flex w-full sm:w-auto justify-center items-center gap-2.5 px-7 py-3.5 md:px-9 md:py-5 rounded-full bg-taupe text-white text-sm md:text-base font-medium tracking-wide transition-[background-color,transform] duration-200 hover:bg-[#968a7c] active:scale-[0.97] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-taupe"
           >
             Get a Free Consultation
             <span className="w-6 h-6 rounded-full bg-white/10 flex items-center justify-center transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-px">
@@ -88,7 +109,7 @@ export default function Hero() {
 
           <Link
             href="/services"
-            className="inline-flex w-full sm:w-auto justify-center items-center gap-2 text-white/65 hover:text-white text-lg font-medium tracking-wide transition-colors duration-200 group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-steel rounded"
+            className="inline-flex w-full sm:w-auto justify-center items-center gap-2 text-white/65 hover:text-white text-sm md:text-lg font-medium tracking-wide transition-colors duration-200 group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-steel rounded"
           >
             Our Services
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="transition-transform duration-200 group-hover:translate-x-0.5" aria-hidden="true">
@@ -105,7 +126,7 @@ export default function Hero() {
         >
           <Link
             href="/case-studies"
-            className="text-white/45 text-lg tracking-wide focus-visible:outline-none"
+            className="text-white/45 text-sm md:text-lg tracking-wide focus-visible:outline-none"
           >
             ★★★★★&nbsp;&nbsp;Rated 5 stars by businesses
           </Link>
