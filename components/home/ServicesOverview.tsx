@@ -78,7 +78,7 @@ export default function ServicesOverview() {
   return (
     <section className="flex flex-col lg:flex-row" aria-labelledby="services-heading">
       {/* Left panel — light taupe wash */}
-      <div className="lg:w-[38%] bg-[#FAF8F5] px-8 py-20 sm:px-12 lg:px-16 xl:px-20 lg:py-28 flex flex-col justify-center" style={{ backgroundColor: 'rgba(168,155,140,0.15)' }}>
+      <div className="lg:w-[38%] bg-[#FAF8F5] px-8 py-20 sm:px-12 lg:px-16 xl:px-20 lg:py-28 flex flex-col justify-center" style={{ backgroundColor: 'rgb(238,234,229)' }}>
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}

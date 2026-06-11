@@ -44,7 +44,7 @@ export default function BlogPage() {
       </section>
 
       {/* Category filter — light taupe wash */}
-      <section className="bg-[rgba(168,155,140,0.15)] border-b border-[rgba(168,155,140,0.25)]">
+      <section className="bg-[rgb(238,234,229)] border-b border-[rgba(168,155,140,0.25)]">
         <div className="container-max section-padding">
           <div className="flex items-center gap-6 py-5 overflow-x-auto no-scrollbar">
             {categories.map((cat) => (

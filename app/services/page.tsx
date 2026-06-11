@@ -129,11 +129,11 @@ const services = [
 
 const sectionBgs = [
   "bg-[#FAF8F5]",
-  "bg-[rgba(168,155,140,0.12)]",
+  "bg-[rgb(238,234,229)]",
   "bg-[#FAF8F5]",
-  "bg-[rgba(168,155,140,0.12)]",
+  "bg-[rgb(238,234,229)]",
   "bg-[#FAF8F5]",
-  "bg-[rgba(168,155,140,0.12)]",
+  "bg-[rgb(238,234,229)]",
 ];
 
 export default function ServicesPage() {
@@ -219,18 +219,18 @@ export default function ServicesPage() {
       ))}
 
       {/* Bottom CTA */}
-      <section className="bg-[rgba(168,155,140,0.12)] py-20">
+      <section className="bg-navy py-20">
         <div className="container-max section-padding text-center">
-          <h2 className="font-baskerville text-3xl md:text-4xl text-navy mb-4">
+          <h2 className="font-baskerville text-3xl md:text-4xl text-white mb-4">
             Not sure what you need?
           </h2>
-          <p className="text-navy/60 mb-8 max-w-md mx-auto">
+          <p className="text-white/60 mb-8 max-w-md mx-auto">
             Talk to us. We&apos;ll help you understand what&apos;s right for your
             situation with no pressure and no jargon.
           </p>
           <Link
             href="/contact"
-            className="group inline-flex items-center gap-2.5 px-7 py-4 rounded-full bg-navy text-white text-sm font-medium tracking-wide transition-all duration-300 hover:bg-steel active:scale-[0.97] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-navy focus-visible:ring-offset-2"
+            className="group inline-flex items-center gap-2.5 px-7 py-4 rounded-full bg-taupe text-white text-sm font-medium tracking-wide transition-all duration-300 hover:bg-[#968a7c] active:scale-[0.97] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-taupe focus-visible:ring-offset-2 focus-visible:ring-offset-navy"
           >
             Get in touch
             <span className="w-6 h-6 rounded-full bg-white/10 flex items-center justify-center">

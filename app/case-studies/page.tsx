@@ -89,7 +89,7 @@ export default function CaseStudiesPage() {
       </section>
 
       {/* CTA */}
-      <section className="bg-[rgba(168,155,140,0.12)] py-20">
+      <section className="bg-[rgb(238,234,229)] py-20">
         <div className="container-max section-padding text-center">
           <h2 className="font-baskerville text-3xl md:text-4xl text-navy mb-4">
             Want results like these?

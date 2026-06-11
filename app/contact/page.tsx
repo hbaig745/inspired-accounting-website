@@ -35,7 +35,7 @@ export default function ContactPage() {
       {/* Contact split — full-bleed panels */}
       <section className="flex flex-col lg:flex-row" aria-label="Contact details and enquiry form">
         {/* Left: details — light taupe wash */}
-        <div className="lg:w-[40%] bg-[rgba(168,155,140,0.15)] px-8 py-16 sm:px-12 lg:px-16 xl:px-20 lg:py-24">
+        <div className="lg:w-[40%] bg-[rgb(238,234,229)] px-8 py-16 sm:px-12 lg:px-16 xl:px-20 lg:py-24">
           <h2 className="font-baskerville text-2xl text-navy mb-8">
             Contact details
           </h2>

@@ -204,7 +204,7 @@ export default function AboutPage() {
       </section>
 
       {/* Team — warm taupe tint */}
-      <section className="bg-[rgba(168,155,140,0.10)] py-20 md:py-28">
+      <section className="bg-[rgb(242,239,235)] py-20 md:py-28">
         <div className="container-max section-padding">
           <span className="text-[11px] font-medium tracking-[0.2em] uppercase text-[#A89B8C]">
             The team
