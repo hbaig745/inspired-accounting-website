@@ -58,7 +58,7 @@ export default function Hero() {
             alt="Inspired Accounting"
             width={480}
             height={216}
-            className="h-auto w-[82vw] sm:w-[65vw] md:hidden"
+            className="h-auto w-[82vw] sm:w-[65vw] max-w-[480px] md:hidden"
             priority
           />
           <Image
@@ -66,7 +66,7 @@ export default function Hero() {
             alt="Inspired Accounting"
             width={480}
             height={216}
-            className="hidden md:block h-auto w-[37vw]"
+            className="hidden md:block h-auto w-[37vw] max-w-[620px]"
             priority
           />
         </motion.div>
