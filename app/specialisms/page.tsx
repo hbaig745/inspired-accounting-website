@@ -2,77 +2,108 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Specialisms",
+  title: "Specialisms | Inspired Accounting",
   description:
-    "Sector-specific accounting expertise from Inspired Accounting — including precision accounting for engineering and consultancy firms.",
+    "Sector-specific accounting expertise from Inspired Accounting — deep knowledge across engineering, e-commerce, construction, hospitality, professional services and property.",
 };
 
 const specialisms = [
   {
-    id: "engineering",
-    label: "Engineering & Consultancy",
-    headline: "Precision Accounting for Precision Minds",
-    intro:
-      "Engineering and consultancy businesses live in a world of specifications, tolerances and exact outcomes. Your work has to be right — not roughly there. Your accounting should be the same. We take the same precise, structured approach to your numbers that you take to your designs and calculations, so you can rely on them when you make decisions.",
-    painPoints: [
-      {
-        title: "Project Work, Messy Numbers",
-        body: "Long-running jobs, variations, retentions and milestones make it hard to see what you have really earned and what it has really cost. Spreadsheets multiply, WIP gets guessed, and profitability by project becomes unclear. We put structure around your project accounting so you can see, at a glance, which contracts are on track and which need attention.",
-      },
-      {
-        title: "Cash Flow Strain on Long Contracts",
-        body: "You might be profitable on paper but constantly waiting on invoices, stage payments or sign-offs. Add VAT timings and PAYE to the mix and cash flow quickly becomes a headache. We help you build cash flow around how your contracts actually pay out, so you can plan ahead instead of firefighting.",
-      },
-      {
-        title: "CIS, VAT and Payroll Complexity",
-        body: "Many engineering and consultancy firms sit close to construction — which means CIS, complex VAT rules and a mix of employees and subcontractors. Getting it wrong risks penalties, loss of CIS gross status or HMRC attention you could do without. We design processes so CIS, VAT and payroll are handled correctly as standard, rather than patched together at the year-end.",
-      },
-      {
-        title: "Innovation Without Clarity on Tax",
-        body: "You may be pushing boundaries with new methods, materials or problem-solving — but not sure how that translates into R&D claims or wider tax planning. Opportunities get missed because nobody has pulled the information together in a structured way. We help you identify where your work may qualify for reliefs and build those conversations into your regular reviews.",
-      },
-    ],
-    services: [
-      {
-        title: "Project-Focused Bookkeeping & Reporting",
-        body: "We build your bookkeeping around projects and contracts, not just nominal codes — with clear tracking of income, costs and margins by job or client, sensible rules for work in progress, and regular reporting that mirrors how you actually run projects.",
-      },
-      {
-        title: "Integrated Payroll, VAT and CIS",
-        body: "Payroll run accurately and on time, aligned with how your teams and subcontractors are engaged. VAT set up and processed to fit your projects and cash flow. CIS handled properly where you are in scope, reducing the risk of deductions or compliance issues.",
-      },
-      {
-        title: "Management Information Engineers Can Trust",
-        body: "Dashboards showing profit, cash and key metrics by project, team or service line. Trends over time so you can see which types of work are really paying off. Simple visuals you can share with directors, investors or lenders — as precise and usable as your own technical outputs.",
-      },
-      {
-        title: "Joined-Up Tax Planning",
-        body: "VAT and scheme choices that support your contracts and cash flow. Salary and dividend planning for directors, aligned with payroll and employment allowances. Corporation tax planning that takes account of equipment, pensions and investment in the business. Extraction strategies that reflect your personal circumstances.",
-      },
-    ],
-    ethos: [
-      {
-        title: "Precision in the Detail",
-        body: "Engineers care about millimetres and tolerances; we care about the same level of accuracy in your accounts. From how invoices are coded to how contracts are reported, we apply consistent, thought-through methods so your figures stand up to scrutiny.",
-      },
-      {
-        title: "Clear Guidance While You Build",
-        body: "You should not have to translate accounting jargon while you are trying to deliver complex projects. We explain what the numbers mean, what decisions they support, and what needs to happen next — in straightforward language your whole leadership team can understand.",
-      },
-      {
-        title: "A Long-Term Relationship",
-        body: "We are not just here for a year-end set of accounts. We stay close to your business through regular check-ins, management reporting and planning sessions, so your finance function grows with your projects and ambitions.",
-      },
-    ],
-    whoWeWorkWith: [
-      "Engineering consultancies and design practices",
-      "Specialist contractors and technical project firms",
-      "Multi-disciplinary consultancies with project-led work",
-    ],
+    id: "engineering-consultancy",
+    href: "/specialisms/engineering-consultancy",
+    icon: (
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+        <circle cx="12" cy="12" r="3" />
+        <path d="M19.07 4.93a10 10 0 0 1 0 14.14M4.93 4.93a10 10 0 0 0 0 14.14" />
+        <path d="M15.54 8.46a5 5 0 0 1 0 7.07M8.46 8.46a5 5 0 0 0 0 7.07" />
+      </svg>
+    ),
+    title: "Engineering & Consultancy",
+    description:
+      "Project-based work demands project-based accounting. We bring precision to your numbers — tracking margins by contract, handling CIS and complex VAT, and giving you management information as exact as your own technical outputs.",
+  },
+  {
+    id: "ecommerce",
+    href: "/specialisms/ecommerce",
+    icon: (
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+        <circle cx="9" cy="21" r="1" />
+        <circle cx="20" cy="21" r="1" />
+        <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6" />
+      </svg>
+    ),
+    title: "E-Commerce",
+    description:
+      "Selling online comes with its own accounting complexity — multiple platforms, marketplaces, inventory, cross-border VAT and payment processors all feeding into your numbers. We make sense of it all so you can focus on growing sales.",
+  },
+  {
+    id: "construction",
+    href: "/specialisms/construction",
+    icon: (
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+        <path d="M2 20h20" />
+        <path d="M5 20V8l7-5 7 5v12" />
+        <path d="M9 20v-5h6v5" />
+      </svg>
+    ),
+    title: "Construction",
+    description:
+      "CIS, VAT on construction services, subcontractors, retentions and long-running contracts make construction one of the most complex sectors for accounting. We've built processes specifically around how construction businesses operate.",
+  },
+  {
+    id: "hospitality",
+    href: "/specialisms/hospitality",
+    icon: (
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+        <path d="M18 8h1a4 4 0 0 1 0 8h-1" />
+        <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z" />
+        <line x1="6" y1="1" x2="6" y2="4" />
+        <line x1="10" y1="1" x2="10" y2="4" />
+        <line x1="14" y1="1" x2="14" y2="4" />
+      </svg>
+    ),
+    title: "Hospitality & Restaurants",
+    description:
+      "Tight margins, high staff turnover, tips, split VAT rates and seasonal cash flow — hospitality businesses need an accountant who understands the sector. We help you keep costs visible, stay compliant and protect your margins.",
+  },
+  {
+    id: "professional-services",
+    href: "/specialisms/professional-services",
+    icon: (
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+        <rect x="2" y="7" width="20" height="14" rx="2" />
+        <path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2" />
+        <line x1="12" y1="12" x2="12" y2="16" />
+        <line x1="10" y1="14" x2="14" y2="14" />
+      </svg>
+    ),
+    title: "Professional Services",
+    description:
+      "Solicitors, architects, marketing agencies, recruiters and other professional firms often have complex income recognition, IR35 exposure and director remuneration decisions to navigate. We provide the clarity and structure to get these right.",
+  },
+  {
+    id: "property",
+    href: "/specialisms/property",
+    icon: (
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+        <polyline points="9 22 9 12 15 12 15 22" />
+      </svg>
+    ),
+    title: "Property & Real Estate",
+    description:
+      "Whether you're a landlord with a handful of properties or a portfolio investor, property has its own tax rules around income, CGT, SDLT and mortgage interest relief. We help you structure ownership and plan tax efficiently at every stage.",
   },
 ];
 
-const sectionBgs = ["bg-[#FAF8F5]", "bg-[rgb(238,234,229)]"];
+const sectionBgs = [
+  "bg-[#FAF8F5]",
+  "bg-[rgb(238,234,229)]",
+  "bg-[#FAF8F5]",
+  "bg-[rgb(238,234,229)]",
+  "bg-[#FAF8F5]",
+  "bg-[rgb(238,234,229)]",
+];
 
 export default function SpecialismsPage() {
   return (
@@ -93,135 +124,40 @@ export default function SpecialismsPage() {
             Our specialisms
           </h1>
           <p className="mt-6 text-white/55 text-lg max-w-xl leading-relaxed">
-            Deep, sector-specific expertise for businesses where generic accounting
-            simply isn&apos;t enough.
+            Deep, sector-specific expertise for businesses where generic accounting simply isn&apos;t enough.
           </p>
         </div>
       </section>
 
-      {/* Specialisms */}
-      {specialisms.map((s, si) => (
-        <div key={s.id} id={s.id}>
-
-          {/* Intro */}
-          <section className={`${sectionBgs[si % 2]} py-14 md:py-20`}>
-            <div className="container-max section-padding">
-              <span className="text-xs font-medium tracking-[0.18em] uppercase text-taupe">
-                {s.label}
-              </span>
-              <h2 className="mt-3 font-baskerville text-3xl md:text-4xl xl:text-5xl text-navy leading-tight tracking-tight max-w-2xl">
-                {s.headline}
-              </h2>
-              <p className="mt-6 text-navy/60 leading-relaxed max-w-2xl text-lg">
-                {s.intro}
-              </p>
-            </div>
-          </section>
-
-          {/* Pain points */}
-          <section className={`${sectionBgs[(si + 1) % 2]} py-14 md:py-20`}>
-            <div className="container-max section-padding">
-              <h3 className="font-baskerville text-2xl md:text-3xl text-navy mb-10">
-                The pain points we help you solve
-              </h3>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                {s.painPoints.map((p) => (
-                  <div
-                    key={p.title}
-                    className="bg-white border border-[rgba(168,155,140,0.25)] rounded-xl p-8"
-                  >
-                    <h4 className="font-baskerville text-lg text-navy mb-3">{p.title}</h4>
-                    <p className="text-navy/60 text-sm leading-relaxed">{p.body}</p>
+      {/* Specialism cards */}
+      {specialisms.map((s, i) => (
+        <section key={s.id} id={s.id} className={`${sectionBgs[i]} py-14 md:py-20`}>
+          <Link href={s.href} className="block container-max section-padding group cursor-pointer">
+            <article className="grid grid-cols-1 lg:grid-cols-12 gap-8">
+              <div className="lg:col-span-5">
+                <div className="flex items-start gap-4">
+                  <div className="w-11 h-11 rounded-lg bg-[#0C263F]/5 flex items-center justify-center text-[#0C263F] flex-shrink-0 mt-0.5 transition-colors duration-300 group-hover:bg-[#0C263F] group-hover:text-white">
+                    {s.icon}
                   </div>
-                ))}
-              </div>
-            </div>
-          </section>
-
-          {/* How we help */}
-          <section className={`${sectionBgs[si % 2]} py-14 md:py-20`}>
-            <div className="container-max section-padding">
-              <h3 className="font-baskerville text-2xl md:text-3xl text-navy mb-10">
-                How we help {s.label.toLowerCase()} firms
-              </h3>
-              <div className="space-y-0 divide-y divide-[rgba(168,155,140,0.25)]">
-                {s.services.map((item, i) => (
-                  <div key={item.title} className="py-8 grid grid-cols-1 lg:grid-cols-12 gap-4 lg:gap-8">
-                    <div className="lg:col-span-1">
-                      <span className="font-baskerville text-[#A89B8C] text-sm">
-                        0{i + 1}
-                      </span>
-                    </div>
-                    <div className="lg:col-span-4">
-                      <h4 className="font-baskerville text-xl text-navy leading-snug">
-                        {item.title}
-                      </h4>
-                    </div>
-                    <div className="lg:col-span-7">
-                      <p className="text-navy/60 leading-relaxed">{item.body}</p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </section>
-
-          {/* Hook */}
-          <section className={`${sectionBgs[si % 2]} py-10 md:py-14 border-t border-[rgba(168,155,140,0.25)]`}>
-            <div className="container-max section-padding">
-              <p className="font-baskerville text-2xl md:text-3xl text-navy leading-snug max-w-2xl">
-                Engineering-level precision for your numbers. Project-focused, precision accounting — turning complex contracts into clear decisions while you concentrate on the work itself.
-              </p>
-            </div>
-          </section>
-
-          {/* Ethos + Who we work with */}
-          <section className={`${sectionBgs[(si + 1) % 2]} py-14 md:py-20`}>
-            <div className="container-max section-padding">
-              <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
-                <div className="lg:col-span-6">
-                  <h3 className="font-baskerville text-2xl md:text-3xl text-navy mb-8">
-                    Our ethos: precision, clarity, partnership
-                  </h3>
-                  <div className="space-y-6">
-                    {s.ethos.map((e) => (
-                      <div key={e.title} className="border-l-4 border-[#A89B8C] pl-6">
-                        <h4 className="font-baskerville text-lg text-navy mb-2">{e.title}</h4>
-                        <p className="text-navy/60 text-sm leading-relaxed">{e.body}</p>
-                      </div>
-                    ))}
+                  <div>
+                    <h2 className="font-baskerville text-2xl md:text-3xl text-navy leading-snug">
+                      {s.title}
+                    </h2>
                   </div>
                 </div>
-                <div className="lg:col-span-5 lg:col-start-8">
-                  <h3 className="font-baskerville text-2xl md:text-3xl text-navy mb-8">
-                    Who we work with
-                  </h3>
-                  <ul className="space-y-3">
-                    {s.whoWeWorkWith.map((w) => (
-                      <li key={w} className="flex items-start gap-3 text-navy/65">
-                        <svg
-                          width="14"
-                          height="14"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          stroke="currentColor"
-                          strokeWidth="2"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          className="text-[#A89B8C] flex-shrink-0 mt-0.5"
-                          aria-hidden="true"
-                        >
-                          <polyline points="20 6 9 17 4 12" />
-                        </svg>
-                        {w}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
               </div>
-            </div>
-          </section>
-        </div>
+              <div className="lg:col-span-7">
+                <p className="text-navy/60 leading-relaxed mb-6">{s.description}</p>
+                <span className="inline-flex items-center gap-1.5 text-steel text-sm font-medium group-hover:text-navy transition-colors duration-200">
+                  Read more
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                    <path d="M5 12h14M12 5l7 7-7 7" />
+                  </svg>
+                </span>
+              </div>
+            </article>
+          </Link>
+        </section>
       ))}
 
       {/* Bottom CTA */}
@@ -231,8 +167,7 @@ export default function SpecialismsPage() {
             Work in one of these sectors?
           </h2>
           <p className="text-white/60 mb-8 max-w-md mx-auto">
-            Talk to us about how we can bring sector-specific expertise to your
-            accounting — no jargon, no pressure.
+            Talk to us about how we can bring sector-specific expertise to your accounting — no jargon, no pressure.
           </p>
           <Link
             href="/contact"
