@@ -37,20 +37,6 @@ const specialisms = [
       "Selling online comes with its own accounting complexity — multiple platforms, marketplaces, inventory, cross-border VAT and payment processors all feeding into your numbers. We make sense of it all so you can focus on growing sales.",
   },
   {
-    id: "construction",
-    href: "/specialisms/construction",
-    icon: (
-      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-        <path d="M2 20h20" />
-        <path d="M5 20V8l7-5 7 5v12" />
-        <path d="M9 20v-5h6v5" />
-      </svg>
-    ),
-    title: "Construction",
-    description:
-      "CIS, VAT on construction services, subcontractors, retentions and long-running contracts make construction one of the most complex sectors for accounting. We've built processes specifically around how construction businesses operate.",
-  },
-  {
     id: "hospitality",
     href: "/specialisms/hospitality",
     icon: (
@@ -102,7 +88,6 @@ const sectionBgs = [
   "bg-[#FAF8F5]",
   "bg-[rgb(238,234,229)]",
   "bg-[#FAF8F5]",
-  "bg-[rgb(238,234,229)]",
 ];
 
 export default function SpecialismsPage() {
