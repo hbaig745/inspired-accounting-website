@@ -14,15 +14,16 @@ export default function Hero() {
       aria-label="Hero"
     >
       {/* Background photo — desktop only */}
-      <div className="hidden md:block absolute inset-0" aria-hidden="true">
-        <Image
-          src="/hero-options/no-logo.png"
-          alt=""
-          fill
-          priority
-          sizes="100vw"
-          className="object-cover object-center"
-        />
+      <div
+        className="hidden md:block absolute inset-0"
+        style={{
+          backgroundImage: "url('/hero-options/no-logo.png')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+        }}
+        aria-hidden="true"
+      >
         {/* Vertical window overlay — dark over number rows, transparent over white panel */}
         <div className="absolute inset-0" style={{ background: "linear-gradient(to bottom, rgba(12,38,63,0.75) 0%, rgba(12,38,63,0.75) 21%, rgba(12,38,63,0.05) 27%, rgba(12,38,63,0.05) 63%, rgba(12,38,63,0.75) 70%, rgba(12,38,63,0.75) 100%)" }} />
         {/* Top gradient — keeps navbar area fully dark */}
