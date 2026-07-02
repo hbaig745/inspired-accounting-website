@@ -16,30 +16,42 @@ type FormState = "idle" | "sending" | "success" | "error";
 
 export default function ContactForm() {
   const [formState, setFormState] = useState<FormState>("idle");
+  const [errorMessage, setErrorMessage] = useState<string>("");
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    setFormState("sending");
 
     const form = e.currentTarget;
-    const data = new FormData(form);
+
+    if (!form.checkValidity()) {
+      form.reportValidity();
+      return;
+    }
+
+    setFormState("sending");
+    setErrorMessage("");
+
+    const data = new URLSearchParams();
+    new FormData(form).forEach((value, key) => {
+      data.append(key, value as string);
+    });
 
     try {
-      // TODO: Connect contact form to CRM once Mitesh confirms the system and integration method
-      // For now, submitting to Formspree — replace action URL with real endpoint
-      const res = await fetch("https://formspree.io/f/YOUR_FORM_ID", {
+      const res = await fetch("/", {
         method: "POST",
-        body: data,
-        headers: { Accept: "application/json" },
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: data.toString(),
       });
 
       if (res.ok) {
         setFormState("success");
         form.reset();
       } else {
+        setErrorMessage("Something went wrong. Please try again or call us on 0116 220 6019.");
         setFormState("error");
       }
     } catch {
+      setErrorMessage("Unable to send your message — please check your connection and try again, or call us on 0116 220 6019.");
       setFormState("error");
     }
   }
@@ -61,7 +73,13 @@ export default function ContactForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit} noValidate className="space-y-6">
+    <form
+      onSubmit={handleSubmit}
+      name="contact"
+      data-netlify="true"
+      className="space-y-6"
+    >
+      <input type="hidden" name="form-name" value="contact" />
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
         <div className="flex flex-col gap-1.5">
           <label htmlFor="name" className="text-xs font-medium text-navy/60 tracking-wide uppercase">
@@ -96,12 +114,13 @@ export default function ContactForm() {
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
         <div className="flex flex-col gap-1.5">
           <label htmlFor="phone" className="text-xs font-medium text-navy/60 tracking-wide uppercase">
-            Phone <span className="text-navy/30 text-xs normal-case">(optional)</span>
+            Phone <span className="text-steel" aria-hidden="true">*</span>
           </label>
           <input
             id="phone"
             name="phone"
             type="tel"
+            required
             autoComplete="tel"
             className="px-4 py-3 rounded-lg border border-[rgba(168,155,140,0.35)] bg-white text-navy text-sm placeholder:text-navy/30 focus:outline-none focus:ring-2 focus:ring-steel/50 focus:border-steel transition-colors duration-200"
             placeholder="0116 000 0000"
@@ -109,12 +128,13 @@ export default function ContactForm() {
         </div>
         <div className="flex flex-col gap-1.5">
           <label htmlFor="company" className="text-xs font-medium text-navy/60 tracking-wide uppercase">
-            Company name <span className="text-navy/30 text-xs normal-case">(optional)</span>
+            Company name <span className="text-steel" aria-hidden="true">*</span>
           </label>
           <input
             id="company"
             name="company"
             type="text"
+            required
             autoComplete="organization"
             className="px-4 py-3 rounded-lg border border-[rgba(168,155,140,0.35)] bg-white text-navy text-sm placeholder:text-navy/30 focus:outline-none focus:ring-2 focus:ring-steel/50 focus:border-steel transition-colors duration-200"
             placeholder="Your company"
@@ -124,11 +144,12 @@ export default function ContactForm() {
 
       <div className="flex flex-col gap-1.5">
         <label htmlFor="service" className="text-xs font-medium text-navy/60 tracking-wide uppercase">
-          Service interested in
+          Service interested in <span className="text-steel" aria-hidden="true">*</span>
         </label>
         <select
           id="service"
           name="service"
+          required
           className="px-4 py-3 rounded-lg border border-[rgba(168,155,140,0.35)] bg-white text-navy text-sm focus:outline-none focus:ring-2 focus:ring-steel/50 focus:border-steel transition-colors duration-200 appearance-none"
         >
           <option value="">Select a service</option>
@@ -168,7 +189,7 @@ export default function ContactForm() {
 
       {formState === "error" && (
         <p className="text-sm text-red-600" role="alert">
-          Something went wrong. Please try again or call us on 0116 220 6019.
+          {errorMessage}
         </p>
       )}
 

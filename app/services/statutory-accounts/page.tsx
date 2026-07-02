@@ -75,45 +75,14 @@ export default function StatutoryAccountsPage() {
           <h1 className="mt-3 font-baskerville text-5xl md:text-6xl xl:text-7xl text-white leading-tight tracking-tight text-balance">
             Statutory Accounts
           </h1>
-          <p className="mt-6 text-white/55 text-lg max-w-xl leading-relaxed">
-            Statutory accounts that do more than tick a box. We turn your numbers — from any starting point — into clear, compliant accounts backed by personal advice on tax, structure and better processes year after year.
-          </p>
-        </div>
-      </section>
-
-      {/* What we do */}
-      <section className="bg-[#FAF8F5] py-14 md:py-20">
-        <div className="container-max section-padding">
-          <h2 className="font-baskerville text-2xl md:text-3xl text-navy mb-10">What we do for you</h2>
-          <div className="space-y-0 divide-y divide-[rgba(168,155,140,0.25)]">
-            {whatWeDo.map((item, i) => (
-              <div key={item.title} className="py-8 grid grid-cols-1 lg:grid-cols-12 gap-4 lg:gap-8">
-                <div className="lg:col-span-1">
-                  <span className="font-baskerville text-[#A89B8C] text-sm">0{i + 1}</span>
-                </div>
-                <div className="lg:col-span-4">
-                  <h3 className="font-baskerville text-xl text-navy leading-snug">{item.title}</h3>
-                </div>
-                <div className="lg:col-span-7">
-                  <p className="text-navy/60 leading-relaxed">{item.body}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Ethos */}
-      <section className="bg-[rgb(238,234,229)] py-14 md:py-20">
-        <div className="container-max section-padding">
-          <h2 className="font-baskerville text-2xl md:text-3xl text-navy mb-10">Our ethos: personal, practical, inspired</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {ethos.map((e) => (
-              <div key={e.title} className="border-l-4 border-[#A89B8C] pl-6">
-                <h3 className="font-baskerville text-lg text-navy mb-2">{e.title}</h3>
-                <p className="text-navy/60 text-sm leading-relaxed">{e.body}</p>
-              </div>
-            ))}
+          <div className="mt-6 flex items-end gap-6">
+            <p className="text-white/55 text-lg max-w-xl leading-relaxed">
+              Statutory accounts that do more than tick a box. We turn your numbers — from any starting point — into clear, compliant accounts backed by personal advice on tax, structure and better processes year after year.
+            </p>
+            <Link href="/contact" className="flex-shrink-0 inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-white/25 text-white/80 text-xs font-medium tracking-wide hover:bg-white/10 hover:text-white transition-all duration-200">
+              Get in touch
+              <svg width="10" height="10" viewBox="0 0 10 10" fill="none" aria-hidden="true"><path d="M2 8L8 2M8 2H3M8 2V7" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
+            </Link>
           </div>
         </div>
       </section>
@@ -142,14 +111,14 @@ export default function StatutoryAccountsPage() {
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="bg-navy py-20">
+      {/* Mid-page CTA */}
+      <section className="bg-[#A89B8C] py-16">
         <div className="container-max section-padding text-center">
           <h2 className="font-baskerville text-3xl md:text-4xl text-white mb-4">Ready to get started?</h2>
-          <p className="text-white/60 mb-8 max-w-md mx-auto">
+          <p className="text-white/75 mb-8 max-w-md mx-auto">
             Book a no-obligation consultation. We&apos;ll review where you are now and how we can bring your accounts up to the level your business deserves.
           </p>
-          <Link href="/contact" className="group inline-flex items-center gap-2.5 px-7 py-4 rounded-full bg-taupe text-white text-sm font-medium tracking-wide transition-all duration-300 hover:bg-[#968a7c] active:scale-[0.97] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-taupe focus-visible:ring-offset-2 focus-visible:ring-offset-navy">
+          <Link href="/contact" className="group inline-flex items-center gap-2.5 px-7 py-4 rounded-full bg-navy text-white text-sm font-medium tracking-wide transition-all duration-300 hover:bg-[#0a1f33] active:scale-[0.97] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/50">
             Get in touch
             <span className="w-6 h-6 rounded-full bg-white/10 flex items-center justify-center">
               <svg width="11" height="11" viewBox="0 0 10 10" fill="none" aria-hidden="true"><path d="M2 8L8 2M8 2H3M8 2V7" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
@@ -157,6 +126,44 @@ export default function StatutoryAccountsPage() {
           </Link>
         </div>
       </section>
+
+      {/* What we do */}
+      <section className="bg-[rgb(238,234,229)] py-14 md:py-20">
+        <div className="container-max section-padding">
+          <h2 className="font-baskerville text-2xl md:text-3xl text-navy mb-10">What we do for you</h2>
+          <div className="space-y-0 divide-y divide-[rgba(168,155,140,0.25)]">
+            {whatWeDo.map((item, i) => (
+              <div key={item.title} className="py-8 grid grid-cols-1 lg:grid-cols-12 gap-4 lg:gap-8">
+                <div className="lg:col-span-1">
+                  <span className="font-baskerville text-[#A89B8C] text-sm">0{i + 1}</span>
+                </div>
+                <div className="lg:col-span-4">
+                  <h3 className="font-baskerville text-xl text-navy leading-snug">{item.title}</h3>
+                </div>
+                <div className="lg:col-span-7">
+                  <p className="text-navy/60 leading-relaxed">{item.body}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Ethos */}
+      <section className="bg-[#FAF8F5] py-14 md:py-20">
+        <div className="container-max section-padding">
+          <h2 className="font-baskerville text-2xl md:text-3xl text-navy mb-10">Our ethos: personal, practical, inspired</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {ethos.map((e) => (
+              <div key={e.title} className="border-l-4 border-[#A89B8C] pl-6">
+                <h3 className="font-baskerville text-lg text-navy mb-2">{e.title}</h3>
+                <p className="text-navy/60 text-sm leading-relaxed">{e.body}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
     </>
   );
 }

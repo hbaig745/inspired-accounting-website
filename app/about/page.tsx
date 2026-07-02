@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "About Us",
+  title: "Why Us",
   description:
-    "Learn about Inspired Accounting — Chartered Certified Accountants based in Leicester since 2006. A team of five ACCA-accredited accountants, all work done in-house.",
+    "Learn about Inspired Accounting — Chartered Certified Accountants based in Leicester since 2006. All work done in-house.",
 };
 
 const team = [
@@ -25,7 +25,16 @@ const credentials = [
   "Established 2006",
 ];
 
+const FOUNDED = new Date(2006, 3); // April 2006
+
+function yearsInPractice() {
+  const now = new Date();
+  const years = now.getFullYear() - FOUNDED.getFullYear();
+  return now >= new Date(now.getFullYear(), 3) ? years : years - 1;
+}
+
 export default function AboutPage() {
+  const years = yearsInPractice();
   return (
     <>
       {/* Hero */}
@@ -38,10 +47,10 @@ export default function AboutPage() {
         </div>
         <div className="container-max section-padding relative z-10">
           <span className="text-xs font-medium tracking-[0.18em] uppercase text-taupe">
-            The firm
+            Why us
           </span>
           <h1 className="mt-3 font-baskerville text-5xl md:text-6xl xl:text-7xl text-white leading-tight tracking-tight text-balance">
-            About Inspired Accounting
+            Why Inspired Accounting
           </h1>
         </div>
       </section>
@@ -60,50 +69,28 @@ export default function AboutPage() {
           {/* Stats */}
           <div className="mt-10 flex items-end gap-3">
             <span className="font-baskerville text-7xl text-white leading-none tracking-tight">
-              18
+              {years}
             </span>
             <span className="text-white/70 text-xs font-medium tracking-[0.15em] uppercase mb-2.5">
               Years in practice
-            </span>
-          </div>
-          <div className="mt-6 flex items-end gap-3">
-            <span className="font-baskerville text-5xl text-white leading-none tracking-tight">
-              5
-            </span>
-            <span className="text-white/70 text-xs font-medium tracking-[0.15em] uppercase mb-1.5">
-              ACCA accountants
             </span>
           </div>
         </div>
 
         {/* Right: warm off-white — body copy + credentials */}
         <div className="flex-1 bg-[#FAF8F5] px-8 py-20 sm:px-12 lg:px-14 xl:px-16 lg:py-28">
-          {/* TODO: Replace placeholder About page copy with real firm story */}
           <div className="space-y-5 text-navy/65 leading-relaxed max-w-xl">
             <p>
-              Our humble roots as a start-up in 2006 means that we
-              didn&apos;t &ldquo;buy&rdquo; our portfolio of clients —
-              rather, we won and retained our clients through our efforts
-              and hard work. Having started as a sole practitioner, our firm
-              has grown organically to a team of five ACCA accredited
-              accountants.
+              For the past 20 years, we have been serving clients as Gower Accountancy. To meet the challenges and opportunities of the next 20 years, we have rebranded as Inspired Accounting.
             </p>
             <p>
-              With expertise spanning a wide and diverse range of fields, we
-              take immense pride and joy in looking after your needs —
-              whatever your sector or industry.
+              Our new name reflects today&apos;s dynamic business environment and our commitment to staying ahead of change. The accountants you work with should be aligned with the technological and digital shifts transforming how business is done. At Inspired Accounting, we combine two decades of experience with modern tools and forward&#8209;thinking advice to support your growth.
             </p>
             <p>
-              All work is completed in house. We never subcontract or send
-              work out to third-party processing centres, as is common
-              practice for many other firms. Much of our accountancy work is
-              interrelated, so we are happy to provide either the whole
-              package or individual services if you so wish.
+              Our love for accounting comes from our love of business. We are genuinely interested in how our clients operate, what drives their success, and the challenges they face. Our focus has always been the welfare of our clients and achieving the best possible outcomes for them. That means taking the time to understand your goals, offering clear and practical advice, and standing alongside you as your business evolves.
             </p>
             <p>
-              Rather than selling you whatever we want to sell, we take time
-              to understand your business&apos;s requirements, and then put
-              together the most cost-efficient package for you.
+              For a long time, accountants have had a reputation for being stuffy, back&#8209;office number&#8209;crunchers to be avoided at all costs. Today, that image is out of date. With the transformation of accounting through AI and cloud&#8209;based systems, accountants are now at the forefront of business. We use real&#8209;time data, automation and smart tools to bring together technical knowledge, accounting expertise and tax insight in a way that has never been possible before. This allows us to be more proactive, more accessible and more focused on helping you make better decisions, faster.
             </p>
           </div>
 
@@ -137,6 +124,7 @@ export default function AboutPage() {
         </div>
       </section>
 
+      {/* CTA */}
       {/* Changing accountants — FAF8F5 with taupe left border on content */}
       <section className="bg-[#FAF8F5] py-20 md:py-28">
         <div className="container-max section-padding">
@@ -233,12 +221,9 @@ export default function AboutPage() {
       {/* CTA */}
       <section className="bg-navy py-20">
         <div className="container-max section-padding text-center">
-          <h2 className="font-baskerville text-3xl md:text-4xl text-white mb-4">
-            Ready to work together?
+          <h2 className="font-baskerville text-3xl md:text-4xl text-white mb-8">
+            Why not start with a free consultation to see how we can help you and your business?
           </h2>
-          <p className="text-white/50 mb-8 max-w-sm mx-auto text-sm">
-            Book a free, no-obligations discovery call to discuss your needs.
-          </p>
           <Link
             href="/contact"
             className="group inline-flex items-center gap-2.5 px-7 py-4 rounded-full bg-steel text-white text-sm font-medium tracking-wide transition-all duration-300 hover:bg-[#3d6a90] active:scale-[0.97] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-steel focus-visible:ring-offset-2 focus-visible:ring-offset-navy"
@@ -252,6 +237,7 @@ export default function AboutPage() {
           </Link>
         </div>
       </section>
+
     </>
   );
 }

@@ -198,8 +198,8 @@ export default function ServicesPage() {
           id={service.id}
           className={`${sectionBgs[i]} py-14 md:py-20`}
         >
-          <div className="container-max section-padding">
-            <article className="grid grid-cols-1 lg:grid-cols-12 gap-8 group">
+          <Link href={service.href} className="block container-max section-padding group cursor-pointer">
+            <article className="grid grid-cols-1 lg:grid-cols-12 gap-8">
               <div className="lg:col-span-5">
                 <div className="flex items-start gap-4">
                   <div className="w-11 h-11 rounded-lg bg-[#0C263F]/5 flex items-center justify-center text-[#0C263F] flex-shrink-0 mt-0.5 transition-colors duration-300 group-hover:bg-[#0C263F] group-hover:text-white">
@@ -216,44 +216,15 @@ export default function ServicesPage() {
                 <p className="text-navy/60 leading-relaxed mb-6">
                   {service.description}
                 </p>
-                {service.items && (
-                  <ul className="space-y-2 mb-6">
-                    {service.items.map((item) => (
-                      <li
-                        key={item}
-                        className="flex items-start gap-3 text-sm text-navy/70"
-                      >
-                        <svg
-                          width="14"
-                          height="14"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          stroke="currentColor"
-                          strokeWidth="2"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          className="text-[#A89B8C] flex-shrink-0 mt-0.5"
-                          aria-hidden="true"
-                        >
-                          <polyline points="20 6 9 17 4 12" />
-                        </svg>
-                        {item}
-                      </li>
-                    ))}
-                  </ul>
-                )}
-                <Link
-                  href={service.href}
-                  className="inline-flex items-center gap-1.5 text-steel text-sm font-medium hover:text-navy transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-steel/50 rounded"
-                >
+                <span className="inline-flex items-center gap-1.5 text-steel text-sm font-medium group-hover:text-navy transition-colors duration-200">
                   Read more
                   <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                     <path d="M5 12h14M12 5l7 7-7 7" />
                   </svg>
-                </Link>
+                </span>
               </div>
             </article>
-          </div>
+          </Link>
         </section>
       ))}
 

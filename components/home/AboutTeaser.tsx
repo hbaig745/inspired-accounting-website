@@ -3,7 +3,14 @@
 import Link from "next/link";
 import { motion } from "framer-motion";
 
+function yearsInPractice() {
+  const now = new Date();
+  const years = now.getFullYear() - 2006;
+  return now >= new Date(now.getFullYear(), 3) ? years : years - 1;
+}
+
 export default function AboutTeaser() {
+  const years = yearsInPractice();
   return (
     <section className="flex flex-col lg:flex-row" aria-labelledby="about-teaser-heading">
       {/* Left panel — solid taupe */}
@@ -27,7 +34,7 @@ export default function AboutTeaser() {
           {/* 18 years stat */}
           <div className="mt-10 flex items-end gap-3">
             <span className="font-baskerville text-7xl text-white leading-none tracking-tight">
-              18
+              {years}
             </span>
             <span className="text-white/70 text-sm font-medium tracking-[0.15em] uppercase mb-2.5">
               Years in practice

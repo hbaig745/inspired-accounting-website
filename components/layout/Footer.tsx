@@ -4,7 +4,7 @@ import Image from "next/image";
 const footerNav = [
   { label: "Services", href: "/services" },
   { label: "Case Studies", href: "/case-studies" },
-  { label: "About Us", href: "/about" },
+  { label: "Why Us", href: "/about" },
   { label: "Blog", href: "/blog" },
   { label: "Contact", href: "/contact" },
 ];
@@ -130,14 +130,6 @@ export default function Footer() {
                   className="hover:text-white transition-colors duration-200"
                 >
                   0116 220 6019
-                </a>
-              </li>
-              <li>
-                <a
-                  href="mailto:javeed@goweronline.co.uk"
-                  className="hover:text-white transition-colors duration-200 break-all"
-                >
-                  javeed@goweronline.co.uk
                 </a>
               </li>
               <li className="leading-relaxed">

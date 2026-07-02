@@ -62,9 +62,15 @@ export default function VATPage() {
           <h1 className="mt-3 font-baskerville text-5xl md:text-6xl xl:text-7xl text-white leading-tight tracking-tight text-balance">
             VAT Services
           </h1>
-          <p className="mt-6 text-white/55 text-lg max-w-xl leading-relaxed">
-            Smarter VAT, stronger reclaims. Align your VAT with high-quality bookkeeping, the right schemes and digital systems — so you reclaim more, stay compliant and handle HMRC enquiries with confidence.
-          </p>
+          <div className="mt-6 flex items-end gap-6">
+            <p className="text-white/55 text-lg max-w-xl leading-relaxed">
+              Smarter VAT, stronger reclaims. Align your VAT with high-quality bookkeeping, the right schemes and digital systems — so you reclaim more, stay compliant and handle HMRC enquiries with confidence.
+            </p>
+            <Link href="/contact" className="flex-shrink-0 inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-white/25 text-white/80 text-xs font-medium tracking-wide hover:bg-white/10 hover:text-white transition-all duration-200">
+              Get in touch
+              <svg width="10" height="10" viewBox="0 0 10 10" fill="none" aria-hidden="true"><path d="M2 8L8 2M8 2H3M8 2V7" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
+            </Link>
+          </div>
         </div>
       </section>
 
@@ -101,6 +107,22 @@ export default function VATPage() {
         </div>
       </section>
 
+      {/* Mid-page CTA */}
+      <section className="bg-[#A89B8C] py-16">
+        <div className="container-max section-padding text-center">
+          <h2 className="font-baskerville text-3xl md:text-4xl text-white mb-4">Want smarter VAT?</h2>
+          <p className="text-white/75 mb-8 max-w-md mx-auto">
+            Talk to us about how we can improve your VAT reclaims and take the stress out of HMRC compliance.
+          </p>
+          <Link href="/contact" className="group inline-flex items-center gap-2.5 px-7 py-4 rounded-full bg-navy text-white text-sm font-medium tracking-wide transition-all duration-300 hover:bg-[#0a1f33] active:scale-[0.97] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/50">
+            Get in touch
+            <span className="w-6 h-6 rounded-full bg-white/10 flex items-center justify-center">
+              <svg width="11" height="11" viewBox="0 0 10 10" fill="none" aria-hidden="true"><path d="M2 8L8 2M8 2H3M8 2V7" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
+            </span>
+          </Link>
+        </div>
+      </section>
+
       {/* Ethos + Who we work with */}
       <section className="bg-[#FAF8F5] py-14 md:py-20">
         <div className="container-max section-padding">
@@ -134,21 +156,6 @@ export default function VATPage() {
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="bg-navy py-20">
-        <div className="container-max section-padding text-center">
-          <h2 className="font-baskerville text-3xl md:text-4xl text-white mb-4">Want smarter VAT?</h2>
-          <p className="text-white/60 mb-8 max-w-md mx-auto">
-            Talk to us about how we can improve your VAT reclaims and take the stress out of HMRC compliance.
-          </p>
-          <Link href="/contact" className="group inline-flex items-center gap-2.5 px-7 py-4 rounded-full bg-taupe text-white text-sm font-medium tracking-wide transition-all duration-300 hover:bg-[#968a7c] active:scale-[0.97] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-taupe focus-visible:ring-offset-2 focus-visible:ring-offset-navy">
-            Get in touch
-            <span className="w-6 h-6 rounded-full bg-white/10 flex items-center justify-center">
-              <svg width="11" height="11" viewBox="0 0 10 10" fill="none" aria-hidden="true"><path d="M2 8L8 2M8 2H3M8 2V7" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
-            </span>
-          </Link>
-        </div>
-      </section>
     </>
   );
 }

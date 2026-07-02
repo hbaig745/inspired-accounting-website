@@ -2,6 +2,12 @@
 
 import { motion } from "framer-motion";
 
+function yearsInPractice() {
+  const now = new Date();
+  const years = now.getFullYear() - 2006;
+  return now >= new Date(now.getFullYear(), 3) ? years : years - 1;
+}
+
 const pillars = [
   {
     number: "01",
@@ -30,6 +36,7 @@ const pillars = [
 ];
 
 export default function WhyUs() {
+  const years = yearsInPractice();
   return (
     <section
       className="bg-navy py-24 md:py-32"
@@ -59,8 +66,8 @@ export default function WhyUs() {
                 Accounting built around you
               </h2>
               <p className="mt-6 text-white/50 text-lg leading-relaxed">
-                Our humble roots as a 2006 start-up mean we earned every client.
-                18 years on, we still operate on the same principles.
+                Our humble roots as a 2006 start-up mean we earned every client.{" "}
+                {years} years on, we still operate on the same principles.
               </p>
               <div className="mt-8 flex items-center gap-4">
                 <div className="w-12 h-12 rounded-full bg-taupe/10 flex items-center justify-center flex-shrink-0">

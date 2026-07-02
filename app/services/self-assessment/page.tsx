@@ -75,9 +75,15 @@ export default function SelfAssessmentPage() {
           <h1 className="mt-3 font-baskerville text-5xl md:text-6xl xl:text-7xl text-white leading-tight tracking-tight text-balance">
             Self Assessment
           </h1>
-          <p className="mt-6 text-white/55 text-lg max-w-xl leading-relaxed">
-            Self-assessment without the stress. We check if you need to file, handle registration, prepare the return and help you plan ahead — so you only pay the tax you actually owe.
-          </p>
+          <div className="mt-6 flex items-end gap-6">
+            <p className="text-white/55 text-lg max-w-xl leading-relaxed">
+              Self-assessment without the stress. We check if you need to file, handle registration, prepare the return and help you plan ahead — so you only pay the tax you actually owe.
+            </p>
+            <Link href="/contact" className="flex-shrink-0 inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-white/25 text-white/80 text-xs font-medium tracking-wide hover:bg-white/10 hover:text-white transition-all duration-200">
+              Get in touch
+              <svg width="10" height="10" viewBox="0 0 10 10" fill="none" aria-hidden="true"><path d="M2 8L8 2M8 2H3M8 2V7" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
+            </Link>
+          </div>
         </div>
       </section>
 
@@ -96,6 +102,22 @@ export default function SelfAssessmentPage() {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Mid-page CTA */}
+      <section className="bg-[#A89B8C] py-16">
+        <div className="container-max section-padding text-center">
+          <h2 className="font-baskerville text-3xl md:text-4xl text-white mb-4">Not sure if you need to file?</h2>
+          <p className="text-white/75 mb-8 max-w-md mx-auto">
+            Get in touch and we&apos;ll review your situation, give you a clear answer and handle everything from there.
+          </p>
+          <Link href="/contact" className="group inline-flex items-center gap-2.5 px-7 py-4 rounded-full bg-navy text-white text-sm font-medium tracking-wide transition-all duration-300 hover:bg-[#0a1f33] active:scale-[0.97] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/50">
+            Get in touch
+            <span className="w-6 h-6 rounded-full bg-white/10 flex items-center justify-center">
+              <svg width="11" height="11" viewBox="0 0 10 10" fill="none" aria-hidden="true"><path d="M2 8L8 2M8 2H3M8 2V7" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
+            </span>
+          </Link>
         </div>
       </section>
 
@@ -138,7 +160,7 @@ export default function SelfAssessmentPage() {
             </div>
             <div className="lg:col-span-5 lg:col-start-8">
               <h2 className="font-baskerville text-2xl md:text-3xl text-navy mb-8">Who we work with</h2>
-              <ul className="space-y-4">
+              <ul className="space-y-4 mb-8">
                 {whoWeWorkWith.map((w) => (
                   <li key={w} className="flex items-start gap-3 text-navy/70">
                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-[#A89B8C] flex-shrink-0 mt-1" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
@@ -146,26 +168,14 @@ export default function SelfAssessmentPage() {
                   </li>
                 ))}
               </ul>
+              <p className="text-navy/60 text-sm leading-relaxed">
+                If you want self-assessment handled properly, with clear advice and minimal hassle, Inspired Accounting is ready to help.
+              </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="bg-navy py-20">
-        <div className="container-max section-padding text-center">
-          <h2 className="font-baskerville text-3xl md:text-4xl text-white mb-4">Not sure if you need to file?</h2>
-          <p className="text-white/60 mb-8 max-w-md mx-auto">
-            Get in touch and we&apos;ll review your situation, give you a clear answer and handle everything from there.
-          </p>
-          <Link href="/contact" className="group inline-flex items-center gap-2.5 px-7 py-4 rounded-full bg-taupe text-white text-sm font-medium tracking-wide transition-all duration-300 hover:bg-[#968a7c] active:scale-[0.97] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-taupe focus-visible:ring-offset-2 focus-visible:ring-offset-navy">
-            Get in touch
-            <span className="w-6 h-6 rounded-full bg-white/10 flex items-center justify-center">
-              <svg width="11" height="11" viewBox="0 0 10 10" fill="none" aria-hidden="true"><path d="M2 8L8 2M8 2H3M8 2V7" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
-            </span>
-          </Link>
-        </div>
-      </section>
     </>
   );
 }

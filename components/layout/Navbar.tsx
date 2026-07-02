@@ -11,7 +11,7 @@ const navLinks = [
   { label: "Services",     href: "/services"      },
   { label: "Specialisms",  href: "/specialisms"   },
   { label: "Case Studies", href: "/case-studies"   },
-  { label: "About",        href: "/about"          },
+  { label: "Why Us",       href: "/about"          },
   { label: "Blog",         href: "/blog"           },
   { label: "Contact",      href: "/contact"        },
 ];
@@ -231,9 +231,6 @@ export default function Navbar() {
                 >
                   <a href="tel:01162206019" className="block text-white/40 text-sm hover:text-white/70 transition-colors">
                     0116 220 6019
-                  </a>
-                  <a href="mailto:javeed@goweronline.co.uk" className="block text-white/40 text-sm mt-1 hover:text-white/70 transition-colors">
-                    javeed@goweronline.co.uk
                   </a>
                 </motion.div>
               </nav>
