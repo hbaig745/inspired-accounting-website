@@ -55,7 +55,7 @@ export default function WhyUs() {
             >
               <div className="flex items-start gap-4 mb-3">
                 <div className="w-[2px] h-[60px] bg-[#A89B8C] flex-shrink-0 mt-1" aria-hidden="true" />
-                <span className="text-sm font-medium tracking-[0.18em] uppercase text-taupe pt-1">
+                <span className="text-[15px] font-medium tracking-[0.08em] text-taupe pt-1">
                   Why choose us
                 </span>
               </div>
@@ -69,13 +69,7 @@ export default function WhyUs() {
                 Our humble roots as a 2006 start-up mean we earned every client.{" "}
                 {years} years on, we still operate on the same principles.
               </p>
-              <div className="mt-8 flex items-center gap-4">
-                <div className="w-12 h-12 rounded-full bg-taupe/10 flex items-center justify-center flex-shrink-0">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="text-taupe" aria-hidden="true">
-                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
-                    <polyline points="22 4 12 14.01 9 11.01" />
-                  </svg>
-                </div>
+              <div className="mt-8">
                 <p className="text-white/40 text-base">
                   ACCA regulated · All work in-house · Est. 2006
                 </p>

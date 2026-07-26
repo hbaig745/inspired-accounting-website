@@ -29,7 +29,7 @@ export default function CTABanner() {
             transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
             className="lg:col-span-8"
           >
-            <span className="text-sm font-medium tracking-[0.18em] uppercase text-taupe block mb-4">
+            <span className="text-[15px] font-medium tracking-[0.08em] text-taupe block mb-4">
               Take the first step
             </span>
             <h2 className="font-baskerville text-5xl md:text-6xl xl:text-7xl text-white leading-tight tracking-tight text-balance">
