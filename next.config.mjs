@@ -14,6 +14,15 @@ const nextConfig = {
       },
     ],
   },
+  async redirects() {
+    return [
+      {
+        source: "/services/one-touch-accounting",
+        destination: "/services/inspired-accounts",
+        permanent: true,
+      },
+    ];
+  },
 };
 
 const withMDX = createMDX({

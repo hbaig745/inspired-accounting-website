@@ -9,8 +9,9 @@ export const metadata: Metadata = {
 
 const services = [
   {
-    id: "one-touch-accounting",
-    href: "/services/one-touch-accounting",
+    id: "inspired-accounts",
+    href: "/services/inspired-accounts",
+    flagship: true,
     icon: (
       <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
         <rect x="2" y="3" width="20" height="14" rx="2" />
@@ -18,17 +19,17 @@ const services = [
         <line x1="12" y1="17" x2="12" y2="21" />
       </svg>
     ),
-    title: "One-Touch Accounting",
+    title: "Inspired Accounts",
     description:
-      "One-Touch Accounting is our fully-integrated, business-focused accounting service for owners who want more than basic compliance. It brings bookkeeping, payroll, VAT, year-end accounts and self-assessment together into one powerful, joined-up system — using Dext and Zoho as the hub for data capture and management reporting.",
+      "Everything your business needs, run as one complete service — professional bookkeeping, VAT, payroll and statutory accounts, fully joined up under one team instead of scattered across different providers. But it doesn't stop at compliance: Inspired Accounts is how we help clients move from chaos to clarity, and from clarity to real growth. See it in action in our case studies.",
     items: [
       "High-quality bookkeeping as standard — every transaction captured, coded and checked",
       "Integrated payroll aligned with your tax planning and cash-flow needs",
       "VAT designed at source — better reclaim, fewer errors, sensible planning",
       "Year-end accounts and corporation tax from a clean, well-run system",
       "Self-assessment for owners, joining your company and personal positions",
-      "Process design using Dext and Zoho for dashboards and management reporting",
-      "Tax planning across VAT, payroll, corporation tax and profit extraction strategies",
+      "Business growth and advisory support, not just compliance filing",
+      "Process design using Dext and Xero for dashboards and management reporting",
       "Fixed service levels with six clear all-inclusive pricing tiers",
     ],
   },
@@ -206,9 +207,20 @@ export default function ServicesPage() {
                     {service.icon}
                   </div>
                   <div>
+                    {service.id === "inspired-accounts" && (
+                      <span className="flex items-center gap-2 text-[11px] font-medium tracking-[0.18em] uppercase text-steel mb-2">
+                        <span className="w-5 h-px bg-steel/50" aria-hidden="true" />
+                        Our flagship service
+                      </span>
+                    )}
                     <h2 className="font-baskerville text-2xl md:text-3xl text-navy leading-snug">
                       {service.title}
                     </h2>
+                    {service.id === "inspired-accounts" && (
+                      <p className="mt-2 font-baskerville text-sm md:text-base text-steel leading-snug">
+                        Financial direction for ambitious businesses.
+                      </p>
+                    )}
                   </div>
                 </div>
               </div>
