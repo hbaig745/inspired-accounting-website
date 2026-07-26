@@ -5,31 +5,31 @@ import { motion } from "framer-motion";
 
 const caseStudies = [
   {
-    slug: "marriage-links",
-    client: "Marriage Links",
-    outcome: "Systems overhauled in 6 months",
+    slug: "ecommerce-retailer",
+    client: "An E-commerce Retailer",
+    outcome: "Gross profit up from 21% to 35%",
     teaser:
-      "When they contacted us in 2007, their accounting function had four layers of accountants reviewing each other. We eliminated all of it.",
-    metric: "Since 2007",
-    metricLabel: "Client",
+      "An online retailer couldn't trust his own Xero numbers. We rebuilt the accounts and shifted the focus from sales to margin — with a £10m target now in sight.",
+    metric: "35%",
+    metricLabel: "Gross profit, up from 21%",
   },
   {
-    slug: "clear-opticians",
-    client: "Clear Opticians",
-    outcome: "Rescued from bankruptcy; sold for ~£3m",
+    slug: "long-established-charity",
+    client: "A Long-Established Charity",
+    outcome: "Complete overhaul; £1.2m turnover",
     teaser:
-      "A 50-year-old opticians on the brink of closure. Five years of meticulous financial management turned it around completely.",
-    metric: "~£3m",
-    metricLabel: "Exit value",
+      "A long-established charity arrived with a tangled, expensive accounting setup. We redesigned it from the ground up into a clear, honest view of performance.",
+    metric: "£1.2m",
+    metricLabel: "Projected turnover",
   },
   {
-    slug: "fresh-energy",
-    client: "Fresh Energy",
-    outcome: "£1m turnover target in 3 years",
+    slug: "property-disclosure",
+    client: "A Property Investor",
+    outcome: "11 years disclosed & accepted by HMRC",
     teaser:
-      "How does an employee become a business owner targeting £1 million turnover in three years? We solved the accounting ahead of the problems.",
-    metric: "£1m",
-    metricLabel: "Target turnover",
+      "Eleven years out of step with HMRC. We rebuilt over a decade of history, filed a full voluntary disclosure, and got the figures accepted in full.",
+    metric: "11 years",
+    metricLabel: "Resolved with HMRC",
   },
 ];
 

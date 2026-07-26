@@ -32,7 +32,7 @@ export default function CaseStudyPage({ params }: Props) {
         <div className="container-max section-padding">
           <Link
             href="/case-studies"
-            className="inline-flex items-center gap-2 text-white/50 hover:text-white text-sm mb-8 transition-colors duration-200 group"
+            className="flex w-fit items-center gap-2 text-white/50 hover:text-white text-sm mb-8 transition-colors duration-200 group"
           >
             <svg
               width="14"
@@ -51,48 +51,96 @@ export default function CaseStudyPage({ params }: Props) {
             All case studies
           </Link>
           <span className="text-xs font-medium tracking-[0.18em] uppercase text-taupe">
-            Case study
+            {study.client && study.client !== study.title
+              ? study.client
+              : "Case study"}
           </span>
-          <h1 className="mt-3 font-baskerville text-5xl md:text-6xl text-white leading-tight tracking-tight">
-            {study.client}
+          <h1 className="mt-3 font-baskerville text-4xl md:text-5xl xl:text-6xl text-white leading-tight tracking-tight max-w-3xl">
+            {study.title}
           </h1>
         </div>
       </section>
 
-      {/* Key outcome — solid taupe panel */}
+      {/* Key outcome + facts — solid taupe panel */}
       <section className="bg-[#A89B8C] border-t border-white/20 py-10">
-        <div className="container-max section-padding">
-          <p className="text-white/70 text-xs font-medium tracking-[0.18em] uppercase mb-1">
-            Key outcome
-          </p>
-          <p className="font-baskerville text-xl md:text-2xl text-white">
-            {study.outcome}
-          </p>
-        </div>
-      </section>
-
-      {/* Pull quote — FAF8F5 */}
-      <section className="bg-[#FAF8F5] py-14">
-        <div className="container-max section-padding">
-          <blockquote className="border-l-2 border-[#A89B8C] pl-8 max-w-2xl">
-            <p className="font-baskerville text-xl md:text-2xl text-navy italic leading-relaxed">
-              &ldquo;{study.excerpt}&rdquo;
+        <div className="container-max section-padding flex flex-col gap-8 md:flex-row md:items-end md:justify-between">
+          <div className="max-w-2xl">
+            <p className="text-white/70 text-xs font-medium tracking-[0.18em] uppercase mb-1">
+              Key outcome
             </p>
-          </blockquote>
+            <p className="font-baskerville text-xl md:text-2xl text-white">
+              {study.outcome}
+            </p>
+          </div>
+          {(study.metric || study.relationship) && (
+            <div className="flex gap-8 flex-shrink-0">
+              {study.metric && (
+                <div>
+                  <span className="block font-baskerville text-3xl text-white leading-none">
+                    {study.metric}
+                  </span>
+                  {study.metricLabel && (
+                    <span className="mt-1.5 block text-white/70 text-[11px] tracking-[0.1em] uppercase max-w-[9rem]">
+                      {study.metricLabel}
+                    </span>
+                  )}
+                </div>
+              )}
+              {study.relationship && (
+                <div className="md:border-l md:border-white/25 md:pl-8">
+                  <span className="block font-baskerville text-lg text-white leading-tight max-w-[10rem]">
+                    {study.relationship}
+                  </span>
+                  <span className="mt-1.5 block text-white/70 text-[11px] tracking-[0.1em] uppercase">
+                    Engagement
+                  </span>
+                </div>
+              )}
+            </div>
+          )}
         </div>
       </section>
 
-      {/* Body */}
+      {/* Standfirst + body */}
       <article className="bg-[#FAF8F5] py-16 md:py-24">
         <div className="container-max section-padding">
           <div className="max-w-2xl">
-            {study.content.split("\n\n").map((paragraph, i) => (
-              paragraph.trim() ? (
-                <p key={i} className="text-navy/70 leading-relaxed mb-6">
-                  {paragraph}
+            {study.quote ? (
+              <blockquote className="border-l-2 border-[#A89B8C] pl-8 mb-12">
+                <p className="font-baskerville text-xl md:text-2xl text-navy italic leading-relaxed">
+                  &ldquo;{study.quote}&rdquo;
                 </p>
-              ) : null
-            ))}
+                {study.quoteAuthor && (
+                  <footer className="mt-4 text-taupe text-sm tracking-wide">
+                    — {study.quoteAuthor}
+                  </footer>
+                )}
+              </blockquote>
+            ) : (
+              <p className="font-baskerville text-xl md:text-2xl text-navy leading-relaxed mb-12">
+                {study.excerpt}
+              </p>
+            )}
+
+            {study.content.split("\n\n").map((block, i) => {
+              const trimmed = block.trim();
+              if (!trimmed) return null;
+              if (trimmed.startsWith("## ")) {
+                return (
+                  <h2
+                    key={i}
+                    className="font-baskerville text-2xl text-navy mt-12 mb-4"
+                  >
+                    {trimmed.replace(/^##\s+/, "")}
+                  </h2>
+                );
+              }
+              return (
+                <p key={i} className="text-navy/70 leading-relaxed mb-6">
+                  {trimmed}
+                </p>
+              );
+            })}
           </div>
         </div>
       </article>
