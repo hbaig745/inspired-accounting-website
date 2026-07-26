@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Netlify form detection</title>
+  </head>
+  <body>
+    <!--
+      Static form so Netlify can detect and register the contact form at build
+      time. The React form in components/contact/ContactForm.tsx POSTs its data
+      here (/__forms.html) so Netlify's form handler captures the submission.
+      Keep the field names below in sync with that form. Do not delete.
+    -->
+    <form name="contact" data-netlify="true" hidden>
+      <input type="hidden" name="form-name" value="contact" />
+      <input type="text" name="name" />
+      <input type="email" name="email" />
+      <input type="tel" name="phone" />
+      <input type="text" name="company" />
+      <input type="text" name="service" />
+      <textarea name="message"></textarea>
+      <input type="checkbox" name="consent" />
+    </form>
+  </body>
+</html>

@@ -37,7 +37,10 @@ export default function ContactForm() {
     });
 
     try {
-      const res = await fetch("/", {
+      // Post to the static /__forms.html so Netlify's Forms handler captures
+      // the submission. Posting to "/" is handled by the Next.js server and is
+      // never seen by Netlify Forms.
+      const res = await fetch("/__forms.html", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
         body: data.toString(),

@@ -62,16 +62,6 @@ export default function RootLayout({
         <Navbar />
         <main>{children}</main>
         <Footer />
-        {/* Hidden form for Netlify form detection — never shown to users */}
-        <form name="contact" data-netlify="true" hidden>
-          <input type="text" name="name" />
-          <input type="email" name="email" />
-          <input type="tel" name="phone" />
-          <input type="text" name="company" />
-          <select name="service"><option>placeholder</option></select>
-          <textarea name="message"></textarea>
-          <input type="checkbox" name="consent" />
-        </form>
       </body>
     </html>
   );
