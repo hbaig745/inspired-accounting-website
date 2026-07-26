@@ -86,7 +86,7 @@ export default function CookiePolicyPage() {
             rel="noopener noreferrer"
             className={linkClass}
           >
-            Google's cookie information
+            {`Google's cookie information`}
           </a>
           {`.`}
         </P>
