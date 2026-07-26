@@ -6,6 +6,7 @@ const footerNav = [
   { label: "Case Studies", href: "/case-studies" },
   { label: "Why Us", href: "/about" },
   { label: "Blog", href: "/blog" },
+  { label: "FAQs", href: "/faqs" },
   { label: "Contact", href: "/contact" },
 ];
 
