@@ -5,6 +5,8 @@ import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
+import SiteSearch from "./SiteSearch";
+import type { SearchEntry } from "@/lib/search";
 
 const navLinks = [
   { label: "Home",         href: "/"              },
@@ -17,10 +19,34 @@ const navLinks = [
   { label: "Contact",      href: "/contact"        },
 ];
 
-export default function Navbar() {
+export default function Navbar({ searchIndex }: { searchIndex: SearchEntry[] }) {
   const [scrolled,  setScrolled]  = useState(false);
   const [menuOpen,  setMenuOpen]  = useState(false);
+  const [searchOpen, setSearchOpen] = useState(false);
   const pathname = usePathname();
+
+  const openSearch = () => {
+    setMenuOpen(false);
+    setSearchOpen(true);
+  };
+
+  // Open search with Cmd/Ctrl+K from anywhere on the site.
+  useEffect(() => {
+    const onKey = (e: KeyboardEvent) => {
+      if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === "k") {
+        e.preventDefault();
+        setMenuOpen(false);
+        setSearchOpen(true);
+      }
+    };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, []);
+
+  // Close search on route change.
+  useEffect(() => {
+    setSearchOpen(false);
+  }, [pathname]);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 60);
@@ -116,6 +142,17 @@ export default function Navbar() {
               </AnimatePresence>
 
               <button
+                onClick={openSearch}
+                aria-label="Search"
+                className={`flex-shrink-0 w-10 h-10 flex items-center justify-center rounded transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-taupe ${solid ? "text-navy/70 hover:text-navy" : "text-white/70 hover:text-white"}`}
+              >
+                <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                  <circle cx="11" cy="11" r="8" />
+                  <line x1="21" y1="21" x2="16.65" y2="16.65" />
+                </svg>
+              </button>
+
+              <button
                 onClick={() => setMenuOpen(prev => !prev)}
                 aria-label={menuOpen ? "Close menu" : "Open menu"}
                 aria-expanded={menuOpen}
@@ -139,6 +176,18 @@ export default function Navbar() {
                 </div>
               </button>
             </div>
+
+            {/* Mobile search */}
+            <button
+              onClick={openSearch}
+              aria-label="Search"
+              className={`md:hidden flex-shrink-0 w-10 h-10 flex items-center justify-center rounded transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-taupe ${solid ? "text-navy" : "text-white"}`}
+            >
+              <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                <circle cx="11" cy="11" r="8" />
+                <line x1="21" y1="21" x2="16.65" y2="16.65" />
+              </svg>
+            </button>
 
             {/* Mobile hamburger */}
             <button
@@ -239,6 +288,13 @@ export default function Navbar() {
           </motion.div>
         )}
       </AnimatePresence>
+
+      {/* Global site search */}
+      <SiteSearch
+        open={searchOpen}
+        onClose={() => setSearchOpen(false)}
+        index={searchIndex}
+      />
     </>
   );
 }

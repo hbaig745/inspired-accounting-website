@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import ServicesExplorer from "@/components/services/ServicesExplorer";
 
 export const metadata: Metadata = {
   title: "Services",
@@ -368,9 +369,6 @@ const services = [
   },
 ];
 
-const sectionBg = (i: number) =>
-  i % 2 === 0 ? "bg-[#FAF8F5]" : "bg-[rgb(238,234,229)]";
-
 export default function ServicesPage() {
   return (
     <>
@@ -396,58 +394,8 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      {/* Services — alternating warm backgrounds, each full-bleed */}
-      {services.map((service, i) => (
-        <section
-          key={service.id}
-          id={service.id}
-          className={`${sectionBg(i)} py-14 md:py-20`}
-        >
-          <Link href={service.href} className="block container-max section-padding group cursor-pointer">
-            <article className="grid grid-cols-1 lg:grid-cols-12 gap-8">
-              <div className="lg:col-span-5">
-                <div className="flex items-start gap-4">
-                  <div className="w-11 h-11 rounded-lg bg-[#0C263F]/5 flex items-center justify-center text-[#0C263F] flex-shrink-0 mt-0.5 transition-colors duration-300 group-hover:bg-[#0C263F] group-hover:text-white">
-                    {service.icon}
-                  </div>
-                  <div>
-                    {service.id === "inspired-accounts" && (
-                      <span className="flex items-center gap-2 text-[11px] font-medium tracking-[0.18em] uppercase text-steel mb-2">
-                        <span className="w-5 h-px bg-steel/50" aria-hidden="true" />
-                        Our flagship service
-                      </span>
-                    )}
-                    <h2 className="font-baskerville text-2xl md:text-3xl text-navy leading-snug">
-                      {service.title}
-                    </h2>
-                    {service.id === "inspired-accounts" && (
-                      <>
-                        <p className="mt-2 font-baskerville text-sm md:text-base text-steel leading-snug">
-                          Financial direction for ambitious businesses.
-                        </p>
-                        <p className="mt-1 text-sm text-navy/60 leading-snug">
-                          Our all-inclusive fixed-fee packages.
-                        </p>
-                      </>
-                    )}
-                  </div>
-                </div>
-              </div>
-              <div className="lg:col-span-7">
-                <p className="text-navy/60 leading-relaxed mb-6">
-                  {service.description}
-                </p>
-                <span className="inline-flex items-center gap-1.5 text-steel text-sm font-medium group-hover:text-navy transition-colors duration-200">
-                  Read more
-                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-                    <path d="M5 12h14M12 5l7 7-7 7" />
-                  </svg>
-                </span>
-              </div>
-            </article>
-          </Link>
-        </section>
-      ))}
+      {/* Search + services list */}
+      <ServicesExplorer services={services} />
 
       {/* Bottom CTA */}
       <section className="bg-navy py-20">

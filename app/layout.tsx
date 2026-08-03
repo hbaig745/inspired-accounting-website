@@ -3,6 +3,7 @@ import { Libre_Baskerville, DM_Sans } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
+import { getSearchIndex } from "@/lib/search";
 
 const libreBaskerville = Libre_Baskerville({
   weight: ["400", "700"],
@@ -59,7 +60,7 @@ export default function RootLayout({
       className={`${libreBaskerville.variable} ${dmSans.variable}`}
     >
       <body className="antialiased">
-        <Navbar />
+        <Navbar searchIndex={getSearchIndex()} />
         <main>{children}</main>
         <Footer />
       </body>

@@ -260,21 +260,22 @@ function FeaturedService() {
         className="absolute inset-0 bg-[radial-gradient(ellipse_70%_100%_at_100%_0,rgba(168,155,140,0.22),transparent)] opacity-70 transition-opacity duration-300 group-hover:opacity-100"
         aria-hidden="true"
       />
-      <div className="relative flex flex-col sm:flex-row sm:items-center gap-5">
-        <div className="flex-1">
-          <span className="flex items-center gap-2.5 text-taupe text-xs font-medium tracking-[0.18em] uppercase mb-3">
+      <div className="relative flex flex-col items-center text-center gap-5">
+        <div>
+          <span className="flex items-center justify-center gap-2.5 text-taupe text-xs font-medium tracking-[0.18em] uppercase mb-3">
             <span className="w-6 h-px bg-taupe/60" aria-hidden="true" />
             Our flagship service
+            <span className="w-6 h-px bg-taupe/60" aria-hidden="true" />
           </span>
           <h4 className="font-baskerville text-2xl md:text-3xl text-white leading-tight">
             Inspired Accounts
           </h4>
-          <p className="mt-2 text-white/65 leading-relaxed max-w-md">
+          <p className="mt-2 text-white/65 leading-relaxed max-w-md mx-auto">
             Our all-inclusive, fixed-fee Financial Directorship package — every
             part of your finance function run as one fully managed service.
           </p>
         </div>
-        <span className="flex items-center gap-2 text-steel text-sm font-medium tracking-wide flex-shrink-0 transition-colors duration-200 group-hover:text-white">
+        <span className="flex items-center gap-2 text-steel text-sm font-medium tracking-wide transition-colors duration-200 group-hover:text-white">
           Explore the package
           <svg
             width="16"

@@ -23,8 +23,8 @@ export default function Hero() {
           sizes="100vw"
           className="object-cover object-center"
         />
-        {/* Vertical window overlay — dark over number rows, transparent over white panel */}
-        <div className="absolute inset-0" style={{ background: "linear-gradient(to bottom, rgba(12,38,63,0.75) 0%, rgba(12,38,63,0.75) 21%, rgba(12,38,63,0.05) 27%, rgba(12,38,63,0.05) 63%, rgba(12,38,63,0.75) 70%, rgba(12,38,63,0.75) 100%)" }} />
+        {/* Uniform darken so the white logo card reads cleanly over the photo */}
+        <div className="absolute inset-0 bg-navy/55" />
         {/* Top gradient — keeps navbar area fully dark */}
         <div className="absolute top-0 left-0 right-0 h-20 bg-gradient-to-b from-[#0C263F] to-transparent" />
       </div>
@@ -43,51 +43,61 @@ export default function Hero() {
 
       {/* Centred content — shifted down 5vh */}
       <div
-        className="relative z-10 flex flex-col items-center text-center px-6 max-w-3xl mx-auto"
+        className="relative z-10 flex flex-col items-center text-center px-6 w-full mx-auto"
         style={{ transform: "translateY(7.5vh)" }}
       >
-        <motion.div
-          initial={{ opacity: 0, y: 24 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.9, delay: 0.2, ease: EASE }}
-          className="mb-3 md:mb-4 pt-4 md:pt-6"
-        >
-          {/* White logo on mobile (dark bg), full-colour on desktop (light photo bg) */}
-          <Image
-            src="/logos/Inspired Accounting Logo Negative.svg"
-            alt="Inspired Accounting"
-            width={480}
-            height={216}
-            className="h-auto w-[82vw] sm:w-[65vw] max-w-[480px] md:hidden"
-            priority
-          />
-          <Image
-            src="/logos/Inspired Accounting Logo Full Color.svg"
-            alt="Inspired Accounting"
-            width={480}
-            height={216}
-            className="hidden md:block h-auto w-[37vw] max-w-[620px]"
-            priority
-          />
-        </motion.div>
+        {/* Logo + tagline sit on a white card at desktop (replaces the baked-in
+            white panel); on mobile it's a plain transparent group over the dark bg */}
+        {/* White logo bar: 80% white in the middle, fading to the navy hero on all
+            four edges. The fade lives on a background layer (.hero-logo-bar) so the
+            logo itself is never masked. */}
+        <div className="relative flex flex-col items-center md:w-[90vw] md:max-w-[1500px] md:px-[4.8rem] md:py-[4.2rem] md:mb-2">
+          <div className="hero-logo-bar hidden md:block absolute inset-0" aria-hidden="true" />
+          <div className="relative z-10 flex flex-col items-center">
+            <motion.div
+              initial={{ opacity: 0, y: 24 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.9, delay: 0.2, ease: EASE }}
+              className="mb-3 md:mb-4 pt-4 md:pt-0"
+            >
+              {/* White logo on mobile (dark bg), full-colour on desktop (white card) */}
+              <Image
+                src="/logos/Inspired Accounting Logo Negative.svg"
+                alt="Inspired Accounting"
+                width={480}
+                height={216}
+                className="h-auto w-[82vw] sm:w-[65vw] max-w-[480px] md:hidden"
+                priority
+              />
+              <Image
+                src="/logos/Inspired Accounting Logo Full Color.svg"
+                alt="Inspired Accounting"
+                width={480}
+                height={216}
+                className="hidden md:block h-auto w-[37vw] max-w-[620px]"
+                priority
+              />
+            </motion.div>
 
-        <motion.h1
-          initial={{ opacity: 0, y: 18 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.45, ease: EASE }}
-          className="font-baskerville text-xl sm:text-2xl md:text-3xl text-white md:text-navy leading-snug mb-4 font-bold"
-        >
-          Leicester&apos;s trusted accountants
-        </motion.h1>
+            <motion.h1
+              initial={{ opacity: 0, y: 18 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.45, ease: EASE }}
+              className="font-baskerville text-xl sm:text-2xl md:text-3xl text-white md:text-navy leading-snug mb-4 font-bold"
+            >
+              Leicester&apos;s trusted accountants
+            </motion.h1>
 
-        <motion.p
-          initial={{ opacity: 0, y: 14 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.6, ease: EASE }}
-          className="text-white/80 md:text-navy text-[clamp(0.55rem,1.5vw,0.9rem)] tracking-[0.15em] uppercase whitespace-nowrap font-bold mb-5 md:mb-6"
-        >
-          Chartered Certified Accountants · Est. 2006
-        </motion.p>
+            <motion.p
+              initial={{ opacity: 0, y: 14 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, delay: 0.6, ease: EASE }}
+              className="text-white/80 md:text-navy text-[clamp(0.55rem,1.5vw,0.9rem)] tracking-[0.15em] uppercase whitespace-nowrap font-bold mb-5 md:mb-0"
+            >
+              Chartered Certified Accountants · Est. 2006
+            </motion.p>
+          </div>
+        </div>
 
         <motion.div
           initial={{ opacity: 0, y: 14 }}
