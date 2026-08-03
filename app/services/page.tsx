@@ -97,6 +97,111 @@ const services = [
     ],
   },
   {
+    id: "bookkeeping",
+    icon: (
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+        <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" />
+        <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" />
+      </svg>
+    ),
+    href: "/services/bookkeeping",
+    title: "Bookkeeping Services",
+    description:
+      "Digital bookkeeping for small businesses on Xero and Dext — every transaction captured, coded and reconciled, so your figures are always current, VAT-ready and Making Tax Digital compliant.",
+    items: [
+      "Digital bookkeeping on Xero and Dext — no shoeboxes, no spreadsheets",
+      "Bank, card and supplier accounts reconciled on a regular cycle",
+      "VAT-ready records with VAT captured properly at source",
+      "Up-to-date management figures you can actually use",
+      "Making Tax Digital compliant, ready for the rules widening",
+    ],
+  },
+  {
+    id: "business-consultancy",
+    icon: (
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+        <path d="M9 18h6" />
+        <path d="M10 22h4" />
+        <path d="M15.09 14c.18-.98.65-1.74 1.41-2.5A4.65 4.65 0 0 0 18 8 6 6 0 0 0 6 8c0 1 .23 2.23 1.5 3.5A4.61 4.61 0 0 1 8.91 14" />
+      </svg>
+    ),
+    href: "/services/business-consultancy",
+    title: "Business Consultancy Services",
+    description:
+      "Practical business advice for small business owners — management accounts, cash-flow forecasting, profitability reviews and funding support, from accountants who already know your numbers.",
+    items: [
+      "Monthly or quarterly management accounts and reporting",
+      "Cash-flow forecasting and budgeting to plan ahead",
+      "Profitability and pricing reviews — see where your profit really comes from",
+      "Business plans and forecasts for loan, finance or investment applications",
+      "A sounding board for hiring, investment and other big decisions",
+    ],
+  },
+  {
+    id: "accounting-for-group-structures",
+    icon: (
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+        <polygon points="12 2 2 7 12 12 22 7 12 2" />
+        <polyline points="2 17 12 22 22 17" />
+        <polyline points="2 12 12 17 22 12" />
+      </svg>
+    ),
+    href: "/services/accounting-for-group-structures",
+    title: "Accounting for Group Structures",
+    description:
+      "Statutory and consolidated accounts for group and multi-entity structures — accurate for each company and consistent across the group, with intercompany balances properly reconciled and eliminated.",
+    items: [
+      "Statutory and consolidated accounts under the Companies Act 2006",
+      "Small group exemption assessed each year, so you don't over-pay for work you don't need",
+      "Support for formal parent-subsidiary and informal 'sideways' groups alike",
+      "Intercompany reconciliations — director loans, management charges and balances",
+      "Every company set up on Dext and Xero for a clean, auditable trail",
+    ],
+  },
+  {
+    id: "property-portfolio-accounting",
+    icon: (
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+        <path d="M3 21h18" />
+        <path d="M5 21V7l8-4v18" />
+        <path d="M19 21V11l-6-4" />
+      </svg>
+    ),
+    href: "/services/property-portfolio-accounting",
+    title: "Property Portfolio Accounting",
+    description:
+      "Specialist accounting for landlords and property investors — digital records, Making Tax Digital readiness and portfolio-wide reporting for a private rented sector that's changing fast.",
+    items: [
+      "Move off spreadsheets onto cloud software built for landlords",
+      "Ready for Making Tax Digital ahead of the April 2027 threshold change",
+      "Portfolio-wide reporting — property by property or as a whole",
+      "Record-keeping that keeps pace with Renters' Rights reform",
+      "Tax planning for property income, expenses, structuring and CGT",
+    ],
+  },
+  {
+    id: "company-restructuring",
+    icon: (
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+        <line x1="6" y1="3" x2="6" y2="15" />
+        <circle cx="18" cy="6" r="3" />
+        <circle cx="6" cy="18" r="3" />
+        <path d="M18 9a9 9 0 0 1-9 9" />
+      </svg>
+    ),
+    href: "/services/company-restructuring",
+    title: "Company Structuring & Restructuring Advice",
+    description:
+      "For profitable trading businesses thinking about what to do with the profit they generate — holding companies, investment structures and restructuring advice that protects what you've built.",
+    items: [
+      "Review of your trading performance, retained profits and goals",
+      "Holding company structures to separate surplus cash from trading risk",
+      "Tax-efficient profit extraction and reinvestment, including into property",
+      "Plain-English comparison of sole trader, limited company and group structures",
+      "Free initial consultation, then implementation only if it's the right call",
+    ],
+  },
+  {
     id: "vat",
     icon: (
       <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
@@ -155,17 +260,116 @@ const services = [
       "Linked to your year-end self-assessment so everything ties in correctly",
     ],
   },
+  {
+    id: "corporation-tax",
+    icon: (
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+        <line x1="3" y1="22" x2="21" y2="22" />
+        <line x1="6" y1="18" x2="6" y2="11" />
+        <line x1="10" y1="18" x2="10" y2="11" />
+        <line x1="14" y1="18" x2="14" y2="11" />
+        <line x1="18" y1="18" x2="18" y2="11" />
+        <polygon points="12 2 20 7 4 7" />
+      </svg>
+    ),
+    href: "/services/corporation-tax",
+    title: "Corporation Tax Services",
+    description:
+      "One process, not two. We prepare your corporation tax computation alongside your statutory accounts, using the same figures — capital allowances, AIA and full HMRC computations included.",
+    items: [
+      "CT600 computation prepared alongside your statutory accounts",
+      "Accounting profit reconciled to taxable profit, adjustment by adjustment",
+      "Capital allowances and the Annual Investment Allowance applied correctly",
+      "Full computations documented in a clear working file, not just a return",
+      "Prepared, submitted and tracked to HMRC deadlines",
+    ],
+  },
+  {
+    id: "tax-planning",
+    icon: (
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+        <circle cx="12" cy="12" r="10" />
+        <circle cx="12" cy="12" r="6" />
+        <circle cx="12" cy="12" r="2" />
+      </svg>
+    ),
+    href: "/services/tax-planning",
+    title: "Tax Planning",
+    description:
+      "Year-round business tax planning built into your Inspired Accounts package, plus one-off, bespoke support for personal matters — inheritance tax, capital gains, trusts and HMRC disclosures.",
+    items: [
+      "Corporation tax, VAT and profit-extraction planning as standard for business clients",
+      "Company structuring, share classes and timing of major decisions",
+      "Inheritance tax and estate planning, including gifting, trusts and reliefs",
+      "Capital gains advice on property, share and business asset disposals",
+      "Self-assessment, non-dom / residency matters and HMRC disclosures",
+    ],
+  },
+  {
+    id: "capital-gains-tax-other-assets",
+    icon: (
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+        <line x1="18" y1="20" x2="18" y2="10" />
+        <line x1="12" y1="20" x2="12" y2="4" />
+        <line x1="6" y1="20" x2="6" y2="14" />
+      </svg>
+    ),
+    href: "/services/capital-gains-tax-other-assets",
+    title: "Capital Gains Tax (Shares & Assets)",
+    description:
+      "Clear advice on Capital Gains Tax when you sell shares, business assets or valuable possessions — what's taxable, the current rates and allowances, and how to plan disposals tax-efficiently.",
+    items: [
+      "Work out what's taxable — shares, business assets and possessions over £6,000",
+      "Calculate the likely CGT bill before you commit to a sale",
+      "Make the best use of the Annual Exempt Amount and available reliefs",
+      "Business Asset Disposal Relief and disposal-timing advice",
+      "Reporting through self-assessment, filed on time",
+    ],
+  },
+  {
+    id: "tax-amnesties",
+    icon: (
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+        <polyline points="9 12 11 14 15 10" />
+      </svg>
+    ),
+    href: "/services/tax-amnesties",
+    title: "Tax Amnesties — Coming Clean with HMRC",
+    description:
+      "A clear, confidential route to disclose undeclared tax voluntarily — Let Property Campaign, Worldwide Disclosure Facility and more — usually with far lower penalties than if HMRC finds it first.",
+    items: [
+      "Confidential review of your position and the years involved",
+      "The right disclosure facility for property, offshore or general matters",
+      "Tax, interest and likely penalties worked out up front",
+      "Disclosure submitted with figures HMRC can rely on",
+      "Payment agreed with HMRC, including time-to-pay where appropriate",
+    ],
+  },
+  {
+    id: "tax-investigations",
+    icon: (
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+        <circle cx="11" cy="11" r="8" />
+        <line x1="21" y1="21" x2="16.65" y2="16.65" />
+      </svg>
+    ),
+    href: "/services/tax-investigations",
+    title: "Tax Investigations",
+    description:
+      "Straightforward, well-managed support if HMRC opens an enquiry — from routine aspect checks to COP8 and COP9, handled in-house or alongside specialist tax advisors, with one familiar point of contact.",
+    items: [
+      "Enquiries managed in-house where they're straightforward, to keep costs down",
+      "Specialist tax advisors brought in for complex or higher-risk cases",
+      "Self-assessment, corporation tax, VAT and PAYE enquiries covered",
+      "COP8 and COP9 cases handled with specialist representation from the outset",
+      "One familiar contact coordinating everything on your side",
+    ],
+  },
 ];
 
-const sectionBgs = [
-  "bg-[#FAF8F5]",
-  "bg-[rgb(238,234,229)]",
-  "bg-[#FAF8F5]",
-  "bg-[rgb(238,234,229)]",
-  "bg-[#FAF8F5]",
-  "bg-[rgb(238,234,229)]",
-  "bg-[#FAF8F5]",
-];
+const sectionBg = (i: number) =>
+  i % 2 === 0 ? "bg-[#FAF8F5]" : "bg-[rgb(238,234,229)]";
 
 export default function ServicesPage() {
   return (
@@ -197,7 +401,7 @@ export default function ServicesPage() {
         <section
           key={service.id}
           id={service.id}
-          className={`${sectionBgs[i]} py-14 md:py-20`}
+          className={`${sectionBg(i)} py-14 md:py-20`}
         >
           <Link href={service.href} className="block container-max section-padding group cursor-pointer">
             <article className="grid grid-cols-1 lg:grid-cols-12 gap-8">
@@ -217,9 +421,14 @@ export default function ServicesPage() {
                       {service.title}
                     </h2>
                     {service.id === "inspired-accounts" && (
-                      <p className="mt-2 font-baskerville text-sm md:text-base text-steel leading-snug">
-                        Financial direction for ambitious businesses.
-                      </p>
+                      <>
+                        <p className="mt-2 font-baskerville text-sm md:text-base text-steel leading-snug">
+                          Financial direction for ambitious businesses.
+                        </p>
+                        <p className="mt-1 text-sm text-navy/60 leading-snug">
+                          Our all-inclusive fixed-fee packages.
+                        </p>
+                      </>
                     )}
                   </div>
                 </div>

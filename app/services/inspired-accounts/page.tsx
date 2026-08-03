@@ -124,6 +124,9 @@ export default function InspiredAccountsPage() {
           <p className="mt-6 font-baskerville text-2xl md:text-3xl xl:text-4xl text-white leading-tight tracking-tight max-w-3xl mx-auto text-balance">
             Financial direction for ambitious businesses.
           </p>
+          <p className="mt-4 text-taupe text-sm md:text-base font-medium tracking-[0.06em]">
+            Our all-inclusive fixed-fee packages.
+          </p>
           <p className="mt-5 text-white/55 text-base md:text-lg max-w-xl mx-auto leading-relaxed">
             One fully managed service that puts a clear financial strategy behind
             every decision you make — turning your numbers into direction, not

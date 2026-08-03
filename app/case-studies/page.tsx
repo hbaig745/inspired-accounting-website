@@ -36,9 +36,6 @@ export default function CaseStudiesPage() {
         </div>
       </section>
 
-      {/* Client testimonials */}
-      <Testimonials />
-
       {/* Case studies grid */}
       <section className="bg-[#FAF8F5] py-20 md:py-28">
         <div className="container-max section-padding">
@@ -87,6 +84,9 @@ export default function CaseStudiesPage() {
           </div>
         </div>
       </section>
+
+      {/* Client testimonials — verified Google reviews */}
+      <Testimonials />
 
       {/* CTA */}
       <section className="bg-[rgb(238,234,229)] py-20">

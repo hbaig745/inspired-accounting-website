@@ -24,6 +24,7 @@ const svgProps = {
 const accountingServices: Service[] = [
   {
     title: "Accounting for Group Structures",
+    href: "/services/accounting-for-group-structures",
     icon: (
       <svg {...svgProps}>
         <polygon points="12 2 2 7 12 12 22 7 12 2" />
@@ -68,6 +69,7 @@ const accountingServices: Service[] = [
   },
   {
     title: "Business Consultancy Services",
+    href: "/services/business-consultancy",
     icon: (
       <svg {...svgProps}>
         <path d="M9 18h6" />
@@ -78,6 +80,7 @@ const accountingServices: Service[] = [
   },
   {
     title: "Bookkeeping Services",
+    href: "/services/bookkeeping",
     icon: (
       <svg {...svgProps}>
         <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" />
@@ -87,6 +90,7 @@ const accountingServices: Service[] = [
   },
   {
     title: "Property Portfolio Accounting",
+    href: "/services/property-portfolio-accounting",
     icon: (
       <svg {...svgProps}>
         <path d="M3 21h18" />
@@ -97,6 +101,7 @@ const accountingServices: Service[] = [
   },
   {
     title: "Company Restructuring and Advice",
+    href: "/services/company-restructuring",
     icon: (
       <svg {...svgProps}>
         <line x1="6" y1="3" x2="6" y2="15" />
@@ -111,6 +116,7 @@ const accountingServices: Service[] = [
 const taxServices: Service[] = [
   {
     title: "Tax Planning Services",
+    href: "/services/tax-planning",
     icon: (
       <svg {...svgProps}>
         <circle cx="12" cy="12" r="10" />
@@ -121,6 +127,7 @@ const taxServices: Service[] = [
   },
   {
     title: "Tax Amnesties – Coming Clean",
+    href: "/services/tax-amnesties",
     icon: (
       <svg {...svgProps}>
         <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
@@ -153,6 +160,7 @@ const taxServices: Service[] = [
   },
   {
     title: "Corporation Tax Services",
+    href: "/services/corporation-tax",
     icon: (
       <svg {...svgProps}>
         <line x1="3" y1="22" x2="21" y2="22" />
@@ -176,6 +184,7 @@ const taxServices: Service[] = [
   },
   {
     title: "Capital Gains Tax – Other Assets",
+    href: "/services/capital-gains-tax-other-assets",
     icon: (
       <svg {...svgProps}>
         <line x1="18" y1="20" x2="18" y2="10" />
@@ -186,6 +195,7 @@ const taxServices: Service[] = [
   },
   {
     title: "Tax Investigations",
+    href: "/services/tax-investigations",
     icon: (
       <svg {...svgProps}>
         <circle cx="11" cy="11" r="8" />
@@ -240,14 +250,62 @@ function ServiceCard({ service }: { service: Service }) {
   return <div className={`${base} group`}>{inner}</div>;
 }
 
+function FeaturedService() {
+  return (
+    <Link
+      href="/services/inspired-accounts"
+      className="group relative block overflow-hidden bg-navy border-t-[3px] border-steel p-7 sm:p-9 mb-px transition-shadow duration-300 hover:shadow-[0_8px_36px_rgba(12,38,63,0.18)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-steel/60"
+    >
+      <div
+        className="absolute inset-0 bg-[radial-gradient(ellipse_70%_100%_at_100%_0,rgba(168,155,140,0.22),transparent)] opacity-70 transition-opacity duration-300 group-hover:opacity-100"
+        aria-hidden="true"
+      />
+      <div className="relative flex flex-col sm:flex-row sm:items-center gap-5">
+        <div className="flex-1">
+          <span className="flex items-center gap-2.5 text-taupe text-xs font-medium tracking-[0.18em] uppercase mb-3">
+            <span className="w-6 h-px bg-taupe/60" aria-hidden="true" />
+            Our flagship service
+          </span>
+          <h4 className="font-baskerville text-2xl md:text-3xl text-white leading-tight">
+            Inspired Accounts
+          </h4>
+          <p className="mt-2 text-white/65 leading-relaxed max-w-md">
+            Our all-inclusive, fixed-fee Financial Directorship package — every
+            part of your finance function run as one fully managed service.
+          </p>
+        </div>
+        <span className="flex items-center gap-2 text-steel text-sm font-medium tracking-wide flex-shrink-0 transition-colors duration-200 group-hover:text-white">
+          Explore the package
+          <svg
+            width="16"
+            height="16"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            className="transition-transform duration-200 group-hover:translate-x-0.5"
+            aria-hidden="true"
+          >
+            <path d="M5 12h14M12 5l7 7-7 7" />
+          </svg>
+        </span>
+      </div>
+    </Link>
+  );
+}
+
 function ServiceGroup({
   label,
   services,
   delay,
+  featured,
 }: {
   label: string;
   services: Service[];
   delay: number;
+  featured?: React.ReactNode;
 }) {
   return (
     <motion.div
@@ -260,6 +318,7 @@ function ServiceGroup({
         <span className="w-8 h-px bg-taupe" aria-hidden="true" />
         <h3 className="font-baskerville text-xl md:text-2xl text-navy">{label}</h3>
       </div>
+      {featured}
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-px bg-[#A89B8C]/25">
         {services.map((service) => (
           <ServiceCard key={service.title} service={service} />
@@ -324,7 +383,12 @@ export default function ServicesOverview() {
 
       {/* Right panel — service groups */}
       <div className="flex-1 bg-[#FAF8F5] px-8 py-16 sm:px-12 lg:px-14 xl:px-16 lg:py-28 space-y-14">
-        <ServiceGroup label="Accounting Services" services={accountingServices} delay={0} />
+        <ServiceGroup
+          label="Accounting Services"
+          services={accountingServices}
+          delay={0}
+          featured={<FeaturedService />}
+        />
         <ServiceGroup label="Tax Services" services={taxServices} delay={0.1} />
       </div>
     </section>

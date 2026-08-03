@@ -135,6 +135,29 @@ export default function CaseStudyPage({ params }: Props) {
                   </h2>
                 );
               }
+              if (trimmed.startsWith("> ")) {
+                const lines = trimmed
+                  .split("\n")
+                  .map((l) => l.replace(/^>\s?/, "").trim())
+                  .filter(Boolean);
+                const author = lines.find((l) => l.startsWith("— "));
+                const body = lines.filter((l) => !l.startsWith("— "));
+                return (
+                  <blockquote
+                    key={i}
+                    className="border-l-2 border-[#A89B8C] pl-8 my-10"
+                  >
+                    <p className="font-baskerville text-xl md:text-2xl text-navy italic leading-relaxed">
+                      &ldquo;{body.join(" ")}&rdquo;
+                    </p>
+                    {author && (
+                      <footer className="mt-4 text-taupe text-sm tracking-wide">
+                        {author}
+                      </footer>
+                    )}
+                  </blockquote>
+                );
+              }
               return (
                 <p key={i} className="text-navy/70 leading-relaxed mb-6">
                   {trimmed}
