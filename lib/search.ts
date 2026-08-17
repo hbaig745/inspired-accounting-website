@@ -259,6 +259,12 @@ const specialisms: SearchEntry[] = [
 ];
 
 /**
+ * Every statically-routed page on the site. Drives both the search index and
+ * the sitemap, so a new page added here is picked up by both.
+ */
+export const staticPages: SearchEntry[] = [...pages, ...services, ...specialisms];
+
+/**
  * Assembles the full site search index. Server-only (reads blog and case-study
  * content from disk), so call this from a Server Component and pass the result
  * to the client search UI.
@@ -289,5 +295,5 @@ export function getSearchIndex(): SearchEntry[] {
     })),
   );
 
-  return [...pages, ...services, ...specialisms, ...caseStudies, ...blog, ...faqs];
+  return [...staticPages, ...caseStudies, ...blog, ...faqs];
 }
