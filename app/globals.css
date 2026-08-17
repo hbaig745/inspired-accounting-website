@@ -78,7 +78,7 @@
     #000 12%, #000 88%,
     rgba(0,0,0,0.957) 89.5%, rgba(0,0,0,0.844) 91%, rgba(0,0,0,0.684) 92.5%, rgba(0,0,0,0.5) 94%,
     rgba(0,0,0,0.316) 95.5%, rgba(0,0,0,0.156) 97%, rgba(0,0,0,0.043) 98.5%, transparent 100%;
-  background-color: rgb(238, 234, 229);
+  background-color: rgba(238, 234, 229, 0.7);
   -webkit-mask-image:
     linear-gradient(to right, var(--fade-x)),
     linear-gradient(to bottom, var(--fade-y));
