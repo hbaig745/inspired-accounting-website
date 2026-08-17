@@ -23,8 +23,9 @@ export default function Hero() {
           sizes="100vw"
           className="object-cover object-center"
         />
-        {/* Uniform darken so the white logo card reads cleanly over the photo */}
-        <div className="absolute inset-0 bg-navy/55" />
+        {/* Uniform navy wash — heavy enough that the photo reads as texture behind
+            the brand colour, not as a competing image under the white logo */}
+        <div className="absolute inset-0 bg-navy/85" />
         {/* Top gradient — keeps navbar area fully dark */}
         <div className="absolute top-0 left-0 right-0 h-20 bg-gradient-to-b from-[#0C263F] to-transparent" />
       </div>
@@ -45,13 +46,9 @@ export default function Hero() {
           section's justify-center, so the block's midpoint sits on 50vh. Mobile keeps
           a 7.5vh downward nudge; desktop sits dead centre. */}
       <div className="relative z-10 flex flex-col items-center text-center px-6 w-full mx-auto translate-y-[7.5vh] md:translate-y-0">
-        {/* Logo + tagline sit on a white card at desktop (replaces the baked-in
-            white panel); on mobile it's a plain transparent group over the dark bg */}
-        {/* White logo bar: 80% white in the middle, fading to the navy hero on all
-            four edges. The fade lives on a background layer (.hero-logo-bar) so the
-            logo itself is never masked. */}
-        <div className="relative flex flex-col items-center md:w-[90vw] md:max-w-none md:px-[4.8rem] md:py-[calc(4.2rem+5vh)] md:mb-2">
-          <div className="hero-logo-bar hidden md:block absolute inset-0" aria-hidden="true" />
+        {/* Logo and tagline sit directly on the hero photo — no panel behind them,
+            so everything here is the white/negative treatment at every breakpoint. */}
+        <div className="relative flex flex-col items-center md:mb-2">
           <div className="relative z-10 flex flex-col items-center">
             <motion.div
               initial={{ opacity: 0, y: 24 }}
@@ -59,21 +56,13 @@ export default function Hero() {
               transition={{ duration: 0.9, delay: 0.2, ease: EASE }}
               className="mb-3 md:mb-4 pt-4 md:pt-0"
             >
-              {/* White logo on mobile (dark bg), full-colour on desktop (white card) */}
+              {/* Negative logo: coloured swoosh, white wordmark — reads on the dark bg */}
               <Image
                 src="/logos/Inspired Accounting Logo Negative.svg"
                 alt="Inspired Accounting"
                 width={480}
                 height={216}
-                className="h-auto w-[82vw] sm:w-[65vw] max-w-[480px] md:hidden"
-                priority
-              />
-              <Image
-                src="/logos/Inspired Accounting Logo Full Color.svg"
-                alt="Inspired Accounting"
-                width={480}
-                height={216}
-                className="hidden md:block h-auto w-[37vw] max-w-[620px]"
+                className="h-auto w-[82vw] sm:w-[65vw] max-w-[480px] md:w-[37vw] md:max-w-[620px]"
                 priority
               />
             </motion.div>
@@ -82,7 +71,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 18 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.45, ease: EASE }}
-              className="font-baskerville text-xl sm:text-2xl md:text-3xl text-white md:text-navy leading-snug mb-4 font-bold"
+              className="font-baskerville text-xl sm:text-2xl md:text-3xl text-white leading-snug mb-4 font-bold"
             >
               Leicester&apos;s trusted accountants
             </motion.h1>
@@ -91,7 +80,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 14 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.6, ease: EASE }}
-              className="text-white/80 md:text-navy text-[clamp(0.55rem,1.5vw,0.9rem)] tracking-[0.15em] uppercase whitespace-nowrap font-bold mb-5 md:mb-0"
+              className="text-white/80 text-[clamp(0.55rem,1.5vw,0.9rem)] tracking-[0.15em] uppercase whitespace-nowrap font-bold mb-5 md:mb-0"
             >
               Chartered Certified Accountants · Est. 2006
             </motion.p>

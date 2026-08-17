@@ -54,37 +54,3 @@
   }
 }
 
-/* Hero logo bar: warm off-white (#EEEAE5), fully opaque behind the logo block and
-   fading to transparent on all four edges. Opacity is driven entirely by two
-   intersected masks (alphas multiply), one per axis.
-
-   Each fade follows a smoothstep curve (3t² − 2t³) sampled at eight steps rather
-   than a straight ramp. A linear ramp changes slope abruptly where it meets the
-   solid centre, and the eye reads that kink as a hard line across the panel (Mach
-   banding); smoothstep flattens the slope to zero at both ends of the fade, so
-   there is no edge to latch onto. The alpha steps are shared by both axes — only
-   the distances differ: 20% of the width horizontally, 12% of the (much taller)
-   height vertically, which keeps the two fades a similar size in pixels. */
-.hero-logo-bar {
-  --fade-x:
-    transparent 0%, rgba(0,0,0,0.043) 2.5%, rgba(0,0,0,0.156) 5%, rgba(0,0,0,0.316) 7.5%,
-    rgba(0,0,0,0.5) 10%, rgba(0,0,0,0.684) 12.5%, rgba(0,0,0,0.844) 15%, rgba(0,0,0,0.957) 17.5%,
-    #000 20%, #000 80%,
-    rgba(0,0,0,0.957) 82.5%, rgba(0,0,0,0.844) 85%, rgba(0,0,0,0.684) 87.5%, rgba(0,0,0,0.5) 90%,
-    rgba(0,0,0,0.316) 92.5%, rgba(0,0,0,0.156) 95%, rgba(0,0,0,0.043) 97.5%, transparent 100%;
-  --fade-y:
-    transparent 0%, rgba(0,0,0,0.043) 1.5%, rgba(0,0,0,0.156) 3%, rgba(0,0,0,0.316) 4.5%,
-    rgba(0,0,0,0.5) 6%, rgba(0,0,0,0.684) 7.5%, rgba(0,0,0,0.844) 9%, rgba(0,0,0,0.957) 10.5%,
-    #000 12%, #000 88%,
-    rgba(0,0,0,0.957) 89.5%, rgba(0,0,0,0.844) 91%, rgba(0,0,0,0.684) 92.5%, rgba(0,0,0,0.5) 94%,
-    rgba(0,0,0,0.316) 95.5%, rgba(0,0,0,0.156) 97%, rgba(0,0,0,0.043) 98.5%, transparent 100%;
-  background-color: rgba(238, 234, 229, 0.7);
-  -webkit-mask-image:
-    linear-gradient(to right, var(--fade-x)),
-    linear-gradient(to bottom, var(--fade-y));
-  -webkit-mask-composite: source-in;
-  mask-image:
-    linear-gradient(to right, var(--fade-x)),
-    linear-gradient(to bottom, var(--fade-y));
-  mask-composite: intersect;
-}
