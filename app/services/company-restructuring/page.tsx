@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Company Structuring & Restructuring Advice | Inspired Accounting",
+  title: "Company Structuring & Restructuring Advice",
   description:
     "For growing businesses ready to structure their success — holding companies, investment structures and restructuring advice that protects what you've built and makes surplus profit work harder.",
 };

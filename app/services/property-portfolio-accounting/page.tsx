@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Property Portfolio Accounting | Inspired Accounting",
+  title: "Property Portfolio Accounting",
   description:
     "Specialist accounting for landlords and property investors — digital records, Making Tax Digital readiness and portfolio-wide reporting for a private rented sector that's changing fast.",
 };

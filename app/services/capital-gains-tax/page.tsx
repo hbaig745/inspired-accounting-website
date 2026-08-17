@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Capital Gains Tax on Property | Inspired Accounting",
+  title: "Capital Gains Tax on Property",
   description:
     "Selling a buy-to-let or residential property? Don't miss the 60-day CGT deadline. Fixed-fee support at every stage — from pre-sale estimates to filing and payment.",
 };

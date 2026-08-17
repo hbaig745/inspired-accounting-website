@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Statutory Accounts | Inspired Accounting",
+  title: "Statutory Accounts",
   description:
     "Professional statutory accounts for limited companies at any stage — clear, compliant and backed by personal advice on tax, structure and process improvement.",
 };

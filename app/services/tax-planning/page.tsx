@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Tax Planning | Inspired Accounting",
+  title: "Tax Planning",
   description:
     "Year-round business tax planning built into your Inspired Accounts package, plus one-off, bespoke support for personal matters — inheritance tax, capital gains, trusts and HMRC disclosures.",
 };

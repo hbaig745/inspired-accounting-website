@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Business Consultancy Services | Inspired Accounting",
+  title: "Business Consultancy Services",
   description:
     "Practical business advice for small businesses — management accounts, cash-flow forecasting, profitability reviews and funding support, from accountants who know your numbers inside out.",
 };

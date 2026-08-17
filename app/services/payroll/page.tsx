@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Payroll Services | Inspired Accounting",
+  title: "Payroll Services",
   description:
     "Accurate, on-time payroll with secure digital payslips and an employee app for HR and pay information. We take payroll off your plate completely.",
 };

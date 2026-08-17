@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "VAT Services | Inspired Accounting",
+  title: "VAT Services",
   description:
     "Smarter VAT through better bookkeeping. Bespoke VAT setup, scheme selection, digital processing and HMRC compliance — all built around how your business actually operates.",
 };

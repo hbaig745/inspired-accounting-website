@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Self Assessment | Inspired Accounting",
+  title: "Self Assessment",
   description:
     "Self-assessment made simple. From landlords and CIS sub-contractors to directors and investors — we check if you need a return, file it accurately and help you plan ahead.",
 };

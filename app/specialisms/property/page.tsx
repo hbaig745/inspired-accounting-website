@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Property & Real Estate | Inspired Accounting",
+  title: "Property & Real Estate",
   description:
     "Accounting for property investors and landlords — income tax, CGT, SDLT, mortgage interest relief and portfolio structuring handled with clarity.",
 };

@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Professional Services | Inspired Accounting",
+  title: "Professional Services",
   description:
     "Accounting for professional services firms — solicitors, architects, agencies and consultancies. IR35, income recognition, director remuneration and tax planning handled properly.",
 };

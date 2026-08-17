@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Capital Gains Tax on Shares & Assets | Inspired Accounting",
+  title: "Capital Gains Tax on Shares & Assets",
   description:
     "Clear advice on Capital Gains Tax when you sell shares, business assets or valuable possessions — what's taxable, current rates and allowances, and how to plan disposals tax-efficiently.",
 };

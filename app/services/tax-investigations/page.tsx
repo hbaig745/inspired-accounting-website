@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Tax Investigations | Inspired Accounting",
+  title: "Tax Investigations",
   description:
     "Straightforward, well-managed support if HMRC opens an enquiry into your tax affairs — from routine aspect checks to COP8 and COP9, managed in-house or alongside specialist tax advisors.",
 };

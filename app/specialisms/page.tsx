@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Specialisms | Inspired Accounting",
+  title: "Specialisms",
   description:
     "Sector-specific accounting expertise from Inspired Accounting — deep knowledge across engineering, e-commerce, construction, hospitality, professional services and property.",
 };

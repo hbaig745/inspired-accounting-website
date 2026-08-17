@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Accounting for Group Structures | Inspired Accounting",
+  title: "Accounting for Group Structures",
   description:
     "Statutory and consolidated accounts for group and multi-entity structures — with intercompany transactions properly reconciled and eliminated. Accurate for each company, consistent across the group.",
 };

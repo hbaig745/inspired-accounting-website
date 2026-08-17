@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Tax Amnesties: How to Come Clean with HMRC | Inspired Accounting",
+  title: "Tax Amnesties: How to Come Clean with HMRC",
   description:
     "A clear, confidential route to disclose undeclared tax voluntarily — Let Property Campaign, Worldwide Disclosure Facility and more — usually with far lower penalties than if HMRC finds it first.",
 };

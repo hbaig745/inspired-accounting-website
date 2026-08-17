@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "E-Commerce | Inspired Accounting",
+  title: "E-Commerce",
   description:
     "Accounting for e-commerce businesses — multiple platforms, marketplace VAT, inventory and payment processors all handled so you can focus on growing sales.",
 };

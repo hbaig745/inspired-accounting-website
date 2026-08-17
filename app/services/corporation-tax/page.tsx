@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Corporation Tax Services | Inspired Accounting",
+  title: "Corporation Tax Services",
   description:
-    "Corporation tax handled alongside your statutory accounts — capital allowances, Annual Investment Allowance and full HMRC computations, managed in one joined-up process.",
+    "Corporation tax handled alongside your statutory accounts — capital allowances, full HMRC computations and filing deadlines, managed in one joined-up process.",
 };
 
 const whatWeDo = [

@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Bookkeeping Services | Inspired Accounting",
+  title: "Bookkeeping Services",
   description:
     "Digital bookkeeping for small businesses on Xero and Dext — every transaction captured, coded and reconciled, VAT-ready and Making Tax Digital compliant, so your figures are always up to date.",
 };

@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Engineering & Consultancy | Inspired Accounting",
+  title: "Engineering & Consultancy",
   description:
     "Precision accounting for engineering and consultancy firms. Project-focused bookkeeping, CIS, VAT and management reporting as exact as your technical outputs.",
 };

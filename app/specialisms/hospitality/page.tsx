@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Hospitality & Restaurants | Inspired Accounting",
+  title: "Hospitality & Restaurants",
   description:
     "Accounting for hospitality and restaurant businesses — tight margins, staff costs, tips, split VAT rates and seasonal cash flow managed with clarity.",
 };

@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Business Start-Ups | Inspired Accounting",
+  title: "Business Start-Ups",
   description:
     "Start your business the right way. Calm, tailored advice on structure, registrations and tax — based on your real circumstances — so you can focus on building, not worrying.",
 };
