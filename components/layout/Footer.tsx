@@ -39,7 +39,7 @@ export default function Footer() {
             {/* Social icons */}
             <div className="flex items-center gap-4 mt-6">
               <a
-                href="https://www.facebook.com/GowerAccountancy"
+                href="https://www.facebook.com/profile.php?id=61551728076860"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Facebook"

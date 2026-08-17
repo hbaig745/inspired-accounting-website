@@ -7,6 +7,56 @@ export const metadata: Metadata = {
     "Get in touch with Inspired Accounting. Arrange a free Discovery Call or send us an enquiry. Based in Leicester, serving businesses across the UK.",
 };
 
+/* Social profiles. Rendered here with the contact page's own tile treatment —
+   the same taupe rounded squares as the phone/address/hours rows — rather than
+   the footer's circular outlines on navy. */
+const socials = [
+  {
+    label: "Facebook",
+    href: "https://www.facebook.com/profile.php?id=61551728076860",
+    icon: (
+      <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+    ),
+  },
+  {
+    label: "LinkedIn",
+    href: "https://www.linkedin.com/in/javeed-baig-fcca-4a0b1a11/",
+    icon: (
+      <>
+        <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+        <rect x="2" y="9" width="4" height="12" />
+        <circle cx="4" cy="4" r="2" />
+      </>
+    ),
+  },
+  {
+    label: "Instagram",
+    href: "https://www.instagram.com/inspiredaccounts/",
+    icon: (
+      <>
+        <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+        <circle cx="12" cy="12" r="4" />
+        <circle cx="17.5" cy="6.5" r="0.5" fill="currentColor" />
+      </>
+    ),
+  },
+  {
+    label: "YouTube",
+    href: "https://www.youtube.com/channel/UC7gpYOBAohfXYGRA1zHJsXg",
+    icon: (
+      <>
+        <path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17z" />
+        <path d="m10 15 5-3-5-3z" />
+      </>
+    ),
+  },
+  {
+    label: "TikTok",
+    href: "https://www.tiktok.com/@inspiredaccounting",
+    icon: <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5" />,
+  },
+];
+
 export default function ContactPage() {
   return (
     <>
@@ -41,27 +91,27 @@ export default function ContactPage() {
           </h2>
           <ul className="space-y-6 text-sm">
             <li className="flex items-start gap-4">
-              <span className="w-9 h-9 rounded-lg bg-[rgba(168,155,140,0.2)] flex items-center justify-center text-[#A89B8C] flex-shrink-0 mt-0.5">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+              <span className="w-9 h-9 rounded-lg bg-[rgba(168,155,140,0.2)] flex items-center justify-center text-navy/70 flex-shrink-0 mt-0.5">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                   <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.22h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 8a16 16 0 0 0 6 6l.86-.86a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
                 </svg>
               </span>
               <div>
-                <p className="text-navy/40 text-xs mb-0.5">Phone</p>
+                <p className="text-navy/70 text-xs mb-0.5">Phone</p>
                 <a href="tel:01162206019" className="text-navy hover:text-steel transition-colors duration-200">
                   0116 220 6019
                 </a>
               </div>
             </li>
             <li className="flex items-start gap-4">
-              <span className="w-9 h-9 rounded-lg bg-[rgba(168,155,140,0.2)] flex items-center justify-center text-[#A89B8C] flex-shrink-0 mt-0.5">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+              <span className="w-9 h-9 rounded-lg bg-[rgba(168,155,140,0.2)] flex items-center justify-center text-navy/70 flex-shrink-0 mt-0.5">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                   <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
                   <circle cx="12" cy="10" r="3" />
                 </svg>
               </span>
               <div>
-                <p className="text-navy/40 text-xs mb-0.5">Address</p>
+                <p className="text-navy/70 text-xs mb-0.5">Address</p>
                 <address className="not-italic text-navy leading-relaxed">
                   250 Humberstone Road<br />
                   Leicester, LE5 0EG
@@ -69,18 +119,51 @@ export default function ContactPage() {
               </div>
             </li>
             <li className="flex items-start gap-4">
-              <span className="w-9 h-9 rounded-lg bg-[rgba(168,155,140,0.2)] flex items-center justify-center text-[#A89B8C] flex-shrink-0 mt-0.5">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+              <span className="w-9 h-9 rounded-lg bg-[rgba(168,155,140,0.2)] flex items-center justify-center text-navy/70 flex-shrink-0 mt-0.5">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                   <circle cx="12" cy="12" r="10" />
                   <path d="M12 6v6l4 2" />
                 </svg>
               </span>
               <div>
-                <p className="text-navy/40 text-xs mb-0.5">Hours</p>
+                <p className="text-navy/70 text-xs mb-0.5">Hours</p>
                 <p className="text-navy">Mon – Fri: 9:00 – 18:00</p>
               </div>
             </li>
           </ul>
+
+          {/* Social links — tiles match the contact rows above, aligned to the
+              same left edge so they read as a continuation of the list */}
+          <div className="mt-8">
+            <p className="text-navy/70 text-xs mb-3">Follow us</p>
+            <ul className="flex items-center gap-3">
+              {socials.map((social) => (
+                <li key={social.label}>
+                  <a
+                    href={social.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={social.label}
+                    className="w-9 h-9 rounded-lg bg-[rgba(168,155,140,0.2)] flex items-center justify-center text-navy/70 hover:bg-navy hover:text-white transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-steel/50"
+                  >
+                    <svg
+                      width="14"
+                      height="14"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="1.75"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      aria-hidden="true"
+                    >
+                      {social.icon}
+                    </svg>
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
 
           {/* Location note */}
           <div className="mt-10 border-l-2 border-[#A89B8C] pl-5">
