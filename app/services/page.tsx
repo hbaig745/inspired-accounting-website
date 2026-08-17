@@ -118,6 +118,27 @@ const services = [
     ],
   },
   {
+    id: "property-portfolio-accounting",
+    icon: (
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+        <path d="M3 21h18" />
+        <path d="M5 21V7l8-4v18" />
+        <path d="M19 21V11l-6-4" />
+      </svg>
+    ),
+    href: "/services/property-portfolio-accounting",
+    title: "Property Portfolio Accounting",
+    description:
+      "Specialist accounting for landlords and property investors — digital records, Making Tax Digital readiness and portfolio-wide reporting for a private rented sector that's changing fast.",
+    items: [
+      "Move off spreadsheets onto cloud software built for landlords",
+      "Ready for Making Tax Digital ahead of the April 2027 threshold change",
+      "Portfolio-wide reporting — property by property or as a whole",
+      "Record-keeping that keeps pace with Renters' Rights reform",
+      "Tax planning for property income, expenses, structuring and CGT",
+    ],
+  },
+  {
     id: "business-consultancy",
     icon: (
       <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
@@ -157,27 +178,6 @@ const services = [
       "Support for formal parent-subsidiary and informal 'sideways' groups alike",
       "Intercompany reconciliations — director loans, management charges and balances",
       "Every company set up on Dext and Xero for a clean, auditable trail",
-    ],
-  },
-  {
-    id: "property-portfolio-accounting",
-    icon: (
-      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-        <path d="M3 21h18" />
-        <path d="M5 21V7l8-4v18" />
-        <path d="M19 21V11l-6-4" />
-      </svg>
-    ),
-    href: "/services/property-portfolio-accounting",
-    title: "Property Portfolio Accounting",
-    description:
-      "Specialist accounting for landlords and property investors — digital records, Making Tax Digital readiness and portfolio-wide reporting for a private rented sector that's changing fast.",
-    items: [
-      "Move off spreadsheets onto cloud software built for landlords",
-      "Ready for Making Tax Digital ahead of the April 2027 threshold change",
-      "Portfolio-wide reporting — property by property or as a whole",
-      "Record-keeping that keeps pace with Renters' Rights reform",
-      "Tax planning for property income, expenses, structuring and CGT",
     ],
   },
   {

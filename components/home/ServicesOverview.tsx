@@ -23,17 +23,6 @@ const svgProps = {
 
 const accountingServices: Service[] = [
   {
-    title: "Accounting for Group Structures",
-    href: "/services/accounting-for-group-structures",
-    icon: (
-      <svg {...svgProps}>
-        <polygon points="12 2 2 7 12 12 22 7 12 2" />
-        <polyline points="2 17 12 22 22 17" />
-        <polyline points="2 12 12 17 22 12" />
-      </svg>
-    ),
-  },
-  {
     title: "Statutory Accounts",
     href: "/services/statutory-accounts",
     icon: (
@@ -68,17 +57,6 @@ const accountingServices: Service[] = [
     ),
   },
   {
-    title: "Business Consultancy Services",
-    href: "/services/business-consultancy",
-    icon: (
-      <svg {...svgProps}>
-        <path d="M9 18h6" />
-        <path d="M10 22h4" />
-        <path d="M15.09 14c.18-.98.65-1.74 1.41-2.5A4.65 4.65 0 0 0 18 8 6 6 0 0 0 6 8c0 1 .23 2.23 1.5 3.5A4.61 4.61 0 0 1 8.91 14" />
-      </svg>
-    ),
-  },
-  {
     title: "Bookkeeping Services",
     href: "/services/bookkeeping",
     icon: (
@@ -96,6 +74,28 @@ const accountingServices: Service[] = [
         <path d="M3 21h18" />
         <path d="M5 21V7l8-4v18" />
         <path d="M19 21V11l-6-4" />
+      </svg>
+    ),
+  },
+  {
+    title: "Business Consultancy Services",
+    href: "/services/business-consultancy",
+    icon: (
+      <svg {...svgProps}>
+        <path d="M9 18h6" />
+        <path d="M10 22h4" />
+        <path d="M15.09 14c.18-.98.65-1.74 1.41-2.5A4.65 4.65 0 0 0 18 8 6 6 0 0 0 6 8c0 1 .23 2.23 1.5 3.5A4.61 4.61 0 0 1 8.91 14" />
+      </svg>
+    ),
+  },
+  {
+    title: "Accounting for Group Structures",
+    href: "/services/accounting-for-group-structures",
+    icon: (
+      <svg {...svgProps}>
+        <polygon points="12 2 2 7 12 12 22 7 12 2" />
+        <polyline points="2 17 12 22 22 17" />
+        <polyline points="2 12 12 17 22 12" />
       </svg>
     ),
   },
@@ -324,6 +324,28 @@ function ServiceGroup({
         {services.map((service) => (
           <ServiceCard key={service.title} service={service} />
         ))}
+      </div>
+      <div className="mt-4 flex justify-end">
+        <Link
+          href="/services"
+          className="group inline-flex items-center gap-1.5 text-steel text-sm font-medium tracking-wide underline underline-offset-4 decoration-steel/40 hover:decoration-steel hover:text-navy transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-steel/50 rounded"
+        >
+          Explore all services
+          <svg
+            width="12"
+            height="12"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            className="transition-transform duration-200 group-hover:translate-x-0.5"
+            aria-hidden="true"
+          >
+            <path d="M5 12h14M12 5l7 7-7 7" />
+          </svg>
+        </Link>
       </div>
     </motion.div>
   );
