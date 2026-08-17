@@ -16,7 +16,7 @@ export default function Hero() {
       {/* Background photo — desktop only */}
       <div className="hidden md:block absolute inset-0" aria-hidden="true">
         <Image
-          src="/hero-options/no-logo.png"
+          src="/hero-options/blank.png"
           alt=""
           fill
           priority
@@ -41,17 +41,16 @@ export default function Hero() {
         </svg>
       </div>
 
-      {/* Centred content — shifted down 5vh */}
-      <div
-        className="relative z-10 flex flex-col items-center text-center px-6 w-full mx-auto"
-        style={{ transform: "translateY(7.5vh)" }}
-      >
+      {/* The whole block — logo bar, CTAs and rating — is centred in the hero by the
+          section's justify-center, so the block's midpoint sits on 50vh. Mobile keeps
+          a 7.5vh downward nudge; desktop sits dead centre. */}
+      <div className="relative z-10 flex flex-col items-center text-center px-6 w-full mx-auto translate-y-[7.5vh] md:translate-y-0">
         {/* Logo + tagline sit on a white card at desktop (replaces the baked-in
             white panel); on mobile it's a plain transparent group over the dark bg */}
         {/* White logo bar: 80% white in the middle, fading to the navy hero on all
             four edges. The fade lives on a background layer (.hero-logo-bar) so the
             logo itself is never masked. */}
-        <div className="relative flex flex-col items-center md:w-[90vw] md:max-w-[1500px] md:px-[4.8rem] md:py-[4.2rem] md:mb-2">
+        <div className="relative flex flex-col items-center md:w-[90vw] md:max-w-none md:px-[4.8rem] md:py-[calc(4.2rem+5vh)] md:mb-2">
           <div className="hero-logo-bar hidden md:block absolute inset-0" aria-hidden="true" />
           <div className="relative z-10 flex flex-col items-center">
             <motion.div
@@ -103,7 +102,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 14 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.75, ease: EASE }}
-          className="flex flex-col items-center gap-3 pt-10 md:pt-14"
+          className="flex flex-col items-center gap-3 pt-10 md:pt-4"
         >
           <Link
             href="/contact"
@@ -132,7 +131,7 @@ export default function Hero() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1.0, duration: 0.6 }}
-          className="mt-4 md:mt-5"
+          className="mt-4 md:mt-2"
         >
           <Link
             href="/case-studies"
